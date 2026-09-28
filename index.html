@@ -64,13 +64,35 @@
   </script>
 </head>
 <body class="bg-porcelain font-body text-[15px] leading-relaxed text-deep-slate antialiased selection:bg-electric-blue selection:text-white">
-<!-- STICKY HEADER -->
-<header class="fixed top-0 left-0 w-full z-50 bg-porcelain/90 backdrop-blur-md border-b border-cool-stone/70">
+<!-- STICKY HEADER WITH TRANSPARENT-TO-SOLID TRANSITION -->
+<header id="site-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 bg-transparent border-b border-transparent">
 <div class="h-20 w-full px-margin md:px-margin-tablet lg:px-margin-desktop flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-5 shrink-0">
 <!-- Logo lockup -->
 <a class="flex items-center gap-space-sm shrink-0 hover:opacity-90 transition-opacity" href="#">
 <img alt="On Off Lighting Co. Contemporary Logo" class="h-9 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WXsdRYGGjoDREnTosTYfYmxNp7sEd3tdEmeZ9yCKpOR7ptcl-yeMNmHD0HF5GRprWYhSb2odRjaAr5TX9mcc9BfPxJiur-W8FeApJOLvBr-2H8aaeTf7Il8mHHlPjTyXRtc8abHZgGubBplyiM5f-sqIMTZDcfM9VfOWoC0zAxkSBmsEaRAmakdMwMnTQn0OhRXNT-OMmWSf8cmIAIcU0sTIsqnWRTallq4K8zbZECYGm0StjFVXmSNg"/>
 </a>
+<!-- Subtle vertical architectural divider -->
+<div class="hidden sm:block w-[1px] h-5 bg-cool-stone/80"></div>
+<!-- Interactive Room Illumination ON / OFF Toggle in Header -->
+<div class="relative flex items-center group">
+<div id="header-light-toggle" role="button" aria-pressed="false" tabindex="0" class="flex items-center bg-porcelain/90 hover:bg-white backdrop-blur-md border border-cool-stone/80 hover:border-deep-slate p-0.5 shadow-sm transition-all duration-200 cursor-pointer select-none" title="Toggle room lighting">
+<span id="nav-btn-off" class="px-3.5 py-1 font-mono text-[11px] uppercase tracking-wider bg-deep-slate text-porcelain font-semibold transition-all duration-300">
+OFF
+</span>
+<span class="px-1.5 flex items-center justify-center">
+<span id="nav-toggle-indicator" class="w-2 h-2 rounded-full bg-cool-stone transition-all duration-300"></span>
+</span>
+<span id="nav-btn-on" class="px-3.5 py-1 font-mono text-[11px] uppercase tracking-wider text-blue-gray hover:text-deep-slate transition-all duration-300">
+ON
+</span>
+</div>
+<!-- Subtle Hover Tooltip -->
+<div id="nav-toggle-tooltip" class="absolute left-1/2 -translate-x-1/2 top-full mt-2 px-3 py-1.5 bg-deep-slate text-porcelain font-mono text-[10px] uppercase tracking-widest pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap shadow-md z-50">
+Space Illumination · Click to turn ON
+</div>
+</div>
+</div>
 <!-- Desktop Nav -->
 <nav class="hidden xl:flex items-center gap-8">
 <a class="font-mono text-[12px] uppercase tracking-[0.14em] text-deep-slate hover:text-electric-blue transition-colors duration-200" href="#shop-by-room">Shop by Room</a>
@@ -81,14 +103,6 @@
 </nav>
 <!-- Action items -->
 <div class="flex items-center gap-4 shrink-0">
-<!-- Live Open Badge -->
-<div class="hidden sm:flex items-center gap-2 px-3 py-1.5 bg-mist-gray border border-surface-hairline">
-<span class="relative flex h-2 w-2">
-<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-electric-blue opacity-75"></span>
-<span class="relative inline-flex rounded-full h-2 w-2 bg-electric-blue"></span>
-</span>
-<span class="font-mono text-[11px] uppercase tracking-wider text-deep-slate font-medium">Open now · 10:30 – 20:30</span>
-</div>
 <button aria-label="Search catalog" class="flex items-center justify-center text-deep-slate hover:text-electric-blue transition-colors p-2">
 <span class="material-symbols-outlined text-[20px]">search</span>
 </button>
@@ -102,66 +116,123 @@
 </div>
 </div>
 </header>
-<main class="w-full pt-20 bg-porcelain min-h-screen">
+<main class="w-full bg-porcelain min-h-screen">
 <div class="flex flex-col w-full">
-<!-- 1. HERO SECTION (Light & Cool Architectural Concrete Studio) -->
-<section class="relative w-full overflow-hidden bg-porcelain border-b border-cool-stone/60">
-<div class="grid grid-cols-1 lg:grid-cols-12 min-h-[calc(100vh-5rem)]">
-<!-- Left Text Column -->
-<div class="lg:col-span-6 flex flex-col justify-between p-margin md:p-margin-tablet lg:p-margin-desktop pt-12 lg:pt-20">
-<div class="max-w-xl">
-<!-- Eyebrow -->
-<div class="inline-flex items-center gap-2 px-3 py-1 bg-mist-gray border border-cool-stone mb-8">
-<span class="w-1.5 h-1.5 rounded-full bg-electric-blue"></span>
-<span class="font-mono text-[11px] uppercase tracking-[0.2em] text-blue-gray font-medium">LIGHTING STUDIO · SURAT / ARCHITECTURAL &amp; BESPOKE</span>
+<!-- 1. HERO SECTION: "LIGHT IN MOTION" IMMERSIVE ARCHITECTURAL EXPERIENCE -->
+<section id="hero-experience-section" class="relative w-full h-screen min-h-[720px] overflow-hidden bg-[#E2E5E2] border-b border-cool-stone/60 select-none flex flex-col justify-between">
+<!-- Architectural Full-Bleed Background Container with Layered Parallax -->
+<div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
+<div id="hero-image-layer" class="absolute inset-[-4%] w-[108%] h-[108%] will-change-transform">
+<!-- Architectural Interior Image with Dimmed Natural Daylight for Rich Contrast -->
+<img id="hero-photo" alt="Architectural lighting showroom interior featuring bespoke linear fixtures and concrete geometry" class="w-full h-full object-cover object-center transition-all duration-1000 ease-out filter saturate-[0.88] contrast-[1.16] brightness-[0.85]" src="hero-interior.jpg"/>
+
+<!-- Subdued Natural Daylight Architectural Dimmer & Vignette (Active in OFF state for rich contrast) -->
+<div id="hero-daylight-dimmer" class="absolute inset-0 bg-[#0F1419] opacity-[0.24] pointer-events-none transition-all duration-1000"></div>
+<div id="hero-ambient-daylight" class="absolute inset-0 bg-gradient-to-tr from-[#161D22]/25 via-transparent to-transparent pointer-events-none transition-opacity duration-1000"></div>
+
+<!-- REALISTIC FIXTURE ILLUMINATION BLOOM LAYERS (Active when ON) -->
+<div id="hero-light-blooms" class="absolute inset-0 pointer-events-none opacity-0 transition-opacity duration-1000 ease-out will-change-transform">
+<!-- Layer 1: Left Wall Vertical Architectural Sconces -->
+<div class="absolute left-[4.2%] top-[41%] w-[6px] h-[28%] bg-[#FFFDF5] rounded-full blur-[1px] shadow-[0_0_18px_#FFE0B2,0_0_40px_rgba(255,215,160,0.8)]"></div>
+<div class="absolute left-[1.5%] top-[34%] w-[120px] h-[44%] rounded-full blur-[36px] bg-[#FFD7A0]/45"></div>
+
+<div class="absolute left-[9.6%] top-[43%] w-[6px] h-[25%] bg-[#FFFDF5] rounded-full blur-[1px] shadow-[0_0_18px_#FFE0B2,0_0_40px_rgba(255,215,160,0.8)]"></div>
+<div class="absolute left-[6.5%] top-[36%] w-[120px] h-[40%] rounded-full blur-[34px] bg-[#FFD7A0]/40"></div>
+
+<div class="absolute left-[12.1%] top-[44%] w-[5px] h-[23%] bg-[#FFFDF5] rounded-full blur-[1px] shadow-[0_0_16px_#FFE0B2,0_0_36px_rgba(255,215,160,0.75)]"></div>
+
+<!-- Soft Wall Grazing Field across microcement -->
+<div class="absolute left-[0%] top-[28%] w-[26%] h-[56%] rounded-full blur-[70px] bg-[#FFE4C4]/28"></div>
+
+<!-- Layer 2: Overhead Suspended Track & Downlights -->
+<div class="absolute left-[28.5%] top-[43.5%] w-2.5 h-2.5 rounded-full bg-[#FFFBF0] blur-[1px] shadow-[0_0_14px_#FFD7A0,0_0_30px_rgba(255,215,160,0.7)]"></div>
+<div class="absolute left-[31.8%] top-[47%] w-2.5 h-2.5 rounded-full bg-[#FFFBF0] blur-[1px] shadow-[0_0_14px_#FFD7A0,0_0_30px_rgba(255,215,160,0.7)]"></div>
+<div class="absolute left-[35.2%] top-[48%] w-2.5 h-2.5 rounded-full bg-[#FFFBF0] blur-[1px] shadow-[0_0_14px_#FFD7A0,0_0_30px_rgba(255,215,160,0.7)]"></div>
+<!-- Directional warm grazing wash on floor and island plinth -->
+<div class="absolute left-[20%] top-[58%] w-[28%] h-[32%] rounded-full blur-[60px] bg-[#FFD7A0]/35"></div>
+
+<!-- Layer 3: Upper Mezzanine Architectural Linear Recessed Slots -->
+<div class="absolute left-[47%] top-[24.6%] w-[12.5%] h-[3.5px] bg-[#FFF8E7] blur-[1.5px] shadow-[0_0_18px_#FFD7A0,0_0_35px_rgba(255,215,160,0.6)]"></div>
+<div class="absolute left-[47.5%] top-[31.4%] w-[10.5%] h-[3px] bg-[#FFF8E7] blur-[1.5px] shadow-[0_0_16px_#FFD7A0,0_0_30px_rgba(255,215,160,0.5)]"></div>
+<div class="absolute left-[45%] top-[20%] w-[16%] h-[18%] rounded-full blur-[45px] bg-[#FFE0B2]/22"></div>
+
+<!-- Layer 4: Suspended Glass Bell Pendants at Two-Story Colonnade -->
+<div class="absolute left-[63.2%] top-[47%] w-3 h-3 rounded-full bg-[#FFFDF5] blur-[1px] shadow-[0_0_20px_#FFD7A0,0_0_45px_rgba(255,215,160,0.85)]"></div>
+<div class="absolute left-[64.3%] top-[49.5%] w-3 h-3 rounded-full bg-[#FFFDF5] blur-[1px] shadow-[0_0_20px_#FFD7A0,0_0_45px_rgba(255,215,160,0.85)]"></div>
+<div class="absolute left-[65.6%] top-[48.5%] w-3 h-3 rounded-full bg-[#FFFDF5] blur-[1px] shadow-[0_0_20px_#FFD7A0,0_0_45px_rgba(255,215,160,0.85)]"></div>
+<!-- Far right glass bell pendants -->
+<div class="absolute left-[83.2%] top-[45%] w-4 h-4 rounded-full bg-[#FFFDF5] blur-[1px] shadow-[0_0_26px_#FFD7A0,0_0_55px_rgba(255,215,160,0.9)]"></div>
+<div class="absolute left-[89.5%] top-[43.5%] w-4 h-4 rounded-full bg-[#FFFDF5] blur-[1px] shadow-[0_0_26px_#FFD7A0,0_0_55px_rgba(255,215,160,0.9)]"></div>
+<div class="absolute left-[78%] top-[34%] w-[24%] h-[30%] rounded-full blur-[70px] bg-[#FFD7A0]/30"></div>
+
+<!-- Layer 5: Plinth Table Lamp -->
+<div class="absolute left-[23.6%] top-[74%] w-4 h-4 rounded-full bg-[#FFFDF8] blur-[2px] shadow-[0_0_26px_#FFE0B2,0_0_60px_rgba(255,215,160,0.8)]"></div>
+<div class="absolute left-[19%] top-[70%] w-[14%] h-[18%] rounded-full blur-[45px] bg-[#FFD7A0]/45"></div>
+
+<!-- Natural warm architectural ambient bounce (subtle, physical) -->
+<div class="absolute inset-0 bg-gradient-to-t from-[#FFD7A0]/10 via-transparent to-[#FFE0B2]/08 mix-blend-screen pointer-events-none"></div>
 </div>
-<!-- Main Headline -->
-<h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-deep-slate mb-6 leading-[1.08]">
-                Light, Considered.
-              </h1>
-<!-- Subtitle -->
-<p class="font-body text-base lg:text-lg text-blue-gray font-light leading-relaxed mb-10 max-w-lg">
-                Boutique architectural luminaires and bespoke illumination systems engineered for contemporary residences, commercial galleries, and luxury hospitality across Gujarat.
-              </p>
-<!-- CTAs -->
-<div class="flex flex-wrap items-center gap-4">
-<a class="inline-flex items-center gap-3 px-7 py-3.5 bg-deep-slate text-porcelain font-mono text-[12px] uppercase tracking-widest font-semibold hover:bg-electric-blue transition-colors duration-200" href="#collections">
-<span>Explore the Collection</span>
-<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+
+<!-- Editorial Architectural Overlay (Crisp contrast without washing out concrete architecture) -->
+<div class="absolute inset-0 bg-gradient-to-r from-porcelain/45 via-porcelain/15 to-transparent pointer-events-none"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-[#161D22]/15 via-transparent to-[#161D22]/30 pointer-events-none"></div>
+</div>
+</div>
+
+<!-- Foreground Content Layer with Opposing Parallax -->
+<div id="hero-content-layer" class="relative z-10 w-full h-full flex flex-col justify-between px-margin md:px-margin-tablet lg:px-margin-desktop pt-20 pb-5 pointer-events-none will-change-transform">
+<!-- Asymmetric Headline & Copy (Positioned 7-10% from viewport edge, vertical center) -->
+<div class="w-full max-w-4xl pointer-events-auto pl-0 md:pl-[2%] lg:pl-[4%] my-auto py-2">
+<!-- Small technical / editorial eyebrow label -->
+<div class="inline-flex items-center gap-2.5 px-3 py-1 bg-porcelain/90 backdrop-blur-sm border border-cool-stone mb-4 shadow-sm">
+<span id="hero-state-dot" class="w-2 h-2 rounded-full bg-electric-blue transition-all duration-500"></span>
+<span class="font-mono text-[11px] uppercase tracking-[0.22em] text-deep-slate font-medium">PREMIUM LED LIGHTING · SURAT · GUJARAT</span>
+</div>
+
+<!-- Oversized Space Grotesk Headline (90-130px on desktop) -->
+<h1 class="font-display text-[46px] sm:text-[68px] md:text-[86px] lg:text-[102px] xl:text-[114px] font-semibold text-deep-slate tracking-[-0.035em] leading-[0.91] mb-4 select-none drop-shadow-[0_1px_2px_rgba(255,255,255,0.7)]">
+LIGHT<br/>
+CHANGES<br/>
+EVERYTHING.
+</h1>
+
+<!-- Editorial prose copy -->
+<p class="font-body text-[15px] sm:text-[17px] lg:text-[18px] text-deep-slate/85 font-light leading-relaxed max-w-lg mb-6 drop-shadow-[0_1px_1px_rgba(255,255,255,0.6)]">
+Premium lighting for homes, workspaces and commercial interiors.
+</p>
+
+<!-- One Minimal CTA -->
+<div>
+<a class="group inline-flex items-center gap-3.5 px-6 py-3.5 bg-deep-slate text-porcelain font-mono text-[12px] uppercase tracking-[0.16em] font-semibold hover:bg-electric-blue transition-all duration-300 shadow-md" href="#collections">
+<span>Explore Collection</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
 </a>
-<a class="inline-flex items-center gap-2.5 px-6 py-3.5 border border-deep-slate text-deep-slate font-mono text-[12px] uppercase tracking-widest font-semibold hover:bg-mist-gray transition-colors duration-200" href="#showroom">
-<span>Visit Our Showroom</span>
-<span class="material-symbols-outlined text-[16px] text-electric-blue">location_on</span>
+</div>
+</div>
+
+<!-- Bottom Information Strip -->
+<div class="w-full flex items-end justify-between border-t border-deep-slate/20 pt-4 pointer-events-auto">
+<!-- Bottom-Left Technical Label (JetBrains Mono) -->
+<div class="flex flex-col">
+<span class="font-mono text-[11px] uppercase tracking-[0.2em] text-deep-slate font-semibold">LIGHTING STUDIO</span>
+<span class="font-mono text-[11px] uppercase tracking-[0.2em] text-blue-gray">SURAT / GUJARAT</span>
+</div>
+
+<!-- Central Interactive Lighting Scene Telemetry Pill -->
+<div id="hero-scene-badge" class="hidden md:flex items-center gap-3 bg-porcelain/90 backdrop-blur-md px-4 py-2 border border-cool-stone hover:border-deep-slate shadow-sm cursor-pointer transition-all group" role="button" tabindex="0" title="Click to toggle lighting">
+<span class="relative flex h-2 w-2">
+<span id="hero-badge-ping" class="animate-ping absolute inline-flex h-full w-full rounded-full bg-electric-blue opacity-75"></span>
+<span id="hero-badge-dot" class="relative inline-flex rounded-full h-2 w-2 bg-electric-blue"></span>
+</span>
+<span id="hero-badge-text" class="font-mono text-[11px] uppercase tracking-wider text-deep-slate font-medium">Scene 01 · Natural Daylight (OFF)</span>
+<span class="font-mono text-[10px] text-electric-blue uppercase tracking-widest font-semibold ml-1 group-hover:underline">Toggle ⇄</span>
+</div>
+
+<!-- Bottom-Right Scroll Hint (JetBrains Mono) -->
+<a class="flex items-center gap-2 text-deep-slate hover:text-electric-blue transition-colors group" href="#flip-the-switch-section">
+<span class="font-mono text-[11px] uppercase tracking-[0.2em] font-semibold">SCROLL TO EXPLORE</span>
+<span class="font-mono text-[13px] group-hover:translate-y-0.5 transition-transform">↓</span>
 </a>
-</div>
-</div>
-<!-- Optical Standard Metadata Strip -->
-<div class="mt-12 pt-8 border-t border-cool-stone/80 grid grid-cols-3 gap-4">
-<div>
-<span class="font-mono text-[10px] uppercase tracking-widest text-blue-gray block mb-1">Color Fidelity</span>
-<span class="font-mono text-[13px] text-deep-slate font-medium">CRI 98+ Standard</span>
-</div>
-<div>
-<span class="font-mono text-[10px] uppercase tracking-widest text-blue-gray block mb-1">Architecture</span>
-<span class="font-mono text-[13px] text-deep-slate font-medium">DALI-2 Certified</span>
-</div>
-<div>
-<span class="font-mono text-[10px] uppercase tracking-widest text-blue-gray block mb-1">Spectrum</span>
-<span class="font-mono text-[13px] text-deep-slate font-medium">1800K–4000K</span>
-</div>
-</div>
-</div>
-<!-- Right Image Column (Architectural Showcase) -->
-<div class="lg:col-span-6 relative bg-mist-gray border-t lg:border-t-0 lg:border-l border-cool-stone overflow-hidden flex items-center justify-center">
-<img alt="Minimalist architectural lighting showroom gallery with concrete walls and microcement floor" class="w-full h-full object-cover object-center min-h-[460px] lg:min-h-full" src="https://lh3.googleusercontent.com/aida/AEtjO1XmcrBQovbizPIb1cFmhl5ZI0Cz6xMcGWxIeIBjVIiUrCmeAHwWVrtzbjvJp8Ks0hNzArWLaUbmRp3PfMEFm8NPeWqxsy7vpmaHLxre8LzmYIMiE27nMwazgqtTjideVFwGsjKtk5VmJsGWyTvGVLB89n2bNPoE8vXyf75BZrEkBqYkfMYtWPffnIKQ0bTe7yYAMPGCwE0f_fa6QUbQRCRolJnbFqxn8N_93Y8FjW7qLZ-WDJrPskpzosQ"/>
-<!-- Subtle architectural overlay chip -->
-<div class="absolute bottom-6 right-6 p-4 bg-porcelain/95 border border-cool-stone backdrop-blur-sm max-w-xs shadow-sm">
-<div class="flex items-center gap-2 mb-1">
-<span class="w-1.5 h-1.5 rounded-full bg-electric-blue"></span>
-<span class="font-mono text-[10px] uppercase tracking-widest text-deep-slate font-semibold">Exhibition Pavilion N° 01</span>
-</div>
-<p class="font-body text-[12px] text-blue-gray">Precision linear profiles suspended against honed microcement surfaces · Surat</p>
-</div>
 </div>
 </div>
 </section>
@@ -1080,5 +1151,192 @@
         });
       });
     });
+
+    // ================================================================
+    // HERO EXPERIENCE: "LIGHT IN MOTION" INTERACTION & PARALLAX
+    // ================================================================
+    let heroLightingState = false; // default: OFF (cool architectural natural daylight)
+
+    const siteHeader = document.getElementById('site-header');
+    const headerLightToggle = document.getElementById('header-light-toggle');
+    const navBtnOff = document.getElementById('nav-btn-off');
+    const navBtnOn = document.getElementById('nav-btn-on');
+    const navToggleIndicator = document.getElementById('nav-toggle-indicator');
+    const navToggleTooltip = document.getElementById('nav-toggle-tooltip');
+
+    const heroSection = document.getElementById('hero-experience-section');
+    const heroImageLayer = document.getElementById('hero-image-layer');
+    const heroPhoto = document.getElementById('hero-photo');
+    const heroLightBlooms = document.getElementById('hero-light-blooms');
+    const heroDaylightDimmer = document.getElementById('hero-daylight-dimmer');
+    const heroContentLayer = document.getElementById('hero-content-layer');
+    const heroStateDot = document.getElementById('hero-state-dot');
+    const heroSceneBadge = document.getElementById('hero-scene-badge');
+    const heroBadgePing = document.getElementById('hero-badge-ping');
+    const heroBadgeDot = document.getElementById('hero-badge-dot');
+    const heroBadgeText = document.getElementById('hero-badge-text');
+
+    // Toggle Hero Lighting Scene (OFF <-> ON)
+    function toggleHeroLighting(forceState) {
+      heroLightingState = typeof forceState === 'boolean' ? forceState : !heroLightingState;
+
+      if (heroLightingState) {
+        // --- TURNED ON (Warm physical architectural illumination around fixtures with dimmed natural daylight) ---
+        if (heroLightBlooms) {
+          heroLightBlooms.style.opacity = '1';
+        }
+        if (heroPhoto) {
+          heroPhoto.style.filter = 'saturate(1.12) contrast(1.22) brightness(0.80) sepia(0.06)';
+        }
+        if (heroDaylightDimmer) {
+          heroDaylightDimmer.style.opacity = '0.36';
+        }
+
+        // Header Toggle Visuals
+        if (headerLightToggle) headerLightToggle.setAttribute('aria-pressed', 'true');
+        if (navBtnOff) navBtnOff.className = 'px-3.5 py-1 font-mono text-[11px] uppercase tracking-wider text-blue-gray hover:text-deep-slate transition-all duration-300';
+        if (navBtnOn) navBtnOn.className = 'px-3.5 py-1 font-mono text-[11px] uppercase tracking-wider bg-deep-slate text-porcelain font-semibold transition-all duration-300';
+        if (navToggleIndicator) navToggleIndicator.className = 'w-2 h-2 rounded-full bg-[#FFD7A0] shadow-[0_0_8px_#FFD7A0] transition-all duration-300';
+        if (navToggleTooltip) navToggleTooltip.textContent = 'Space Illumination · Click to turn OFF';
+
+        // Hero Telemetry Badges
+        if (heroStateDot) heroStateDot.className = 'w-2 h-2 rounded-full bg-[#FFD7A0] shadow-[0_0_8px_#FFD7A0] transition-all duration-500';
+        if (heroBadgeDot) heroBadgeDot.className = 'relative inline-flex rounded-full h-2 w-2 bg-[#FFD7A0]';
+        if (heroBadgePing) heroBadgePing.className = 'animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FFD7A0] opacity-75';
+        if (heroBadgeText) heroBadgeText.textContent = 'Scene 02 · Illuminated Showroom (ON)';
+      } else {
+        // --- TURNED OFF (Tranquil cool architectural space, dimmed natural daylight for high contrast) ---
+        if (heroLightBlooms) {
+          heroLightBlooms.style.opacity = '0';
+        }
+        if (heroPhoto) {
+          heroPhoto.style.filter = 'saturate(0.88) contrast(1.16) brightness(0.85)';
+        }
+        if (heroDaylightDimmer) {
+          heroDaylightDimmer.style.opacity = '0.24';
+        }
+
+        // Header Toggle Visuals
+        if (headerLightToggle) headerLightToggle.setAttribute('aria-pressed', 'false');
+        if (navBtnOff) navBtnOff.className = 'px-3.5 py-1 font-mono text-[11px] uppercase tracking-wider bg-deep-slate text-porcelain font-semibold transition-all duration-300';
+        if (navBtnOn) navBtnOn.className = 'px-3.5 py-1 font-mono text-[11px] uppercase tracking-wider text-blue-gray hover:text-deep-slate transition-all duration-300';
+        if (navToggleIndicator) navToggleIndicator.className = 'w-2 h-2 rounded-full bg-cool-stone transition-all duration-300';
+        if (navToggleTooltip) navToggleTooltip.textContent = 'Space Illumination · Click to turn ON';
+
+        // Hero Telemetry Badges
+        if (heroStateDot) heroStateDot.className = 'w-2 h-2 rounded-full bg-electric-blue transition-all duration-500';
+        if (heroBadgeDot) heroBadgeDot.className = 'relative inline-flex rounded-full h-2 w-2 bg-electric-blue';
+        if (heroBadgePing) heroBadgePing.className = 'animate-ping absolute inline-flex h-full w-full rounded-full bg-electric-blue opacity-75';
+        if (heroBadgeText) heroBadgeText.textContent = 'Scene 01 · Natural Daylight (OFF)';
+      }
+    }
+
+    // Connect Header Light Toggle Click & Keyboard
+    if (headerLightToggle) {
+      headerLightToggle.addEventListener('click', () => toggleHeroLighting());
+      headerLightToggle.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleHeroLighting();
+        }
+      });
+
+      // Hover feedback: subtly indicate that it controls the lighting environment
+      headerLightToggle.addEventListener('mouseenter', () => {
+        if (!heroLightingState && heroLightBlooms) {
+          heroLightBlooms.style.opacity = '0.22';
+        }
+      });
+      headerLightToggle.addEventListener('mouseleave', () => {
+        if (!heroLightingState && heroLightBlooms) {
+          heroLightBlooms.style.opacity = '0';
+        }
+      });
+    }
+
+    // Connect Hero Scene Telemetry Badge Click
+    if (heroSceneBadge) {
+      heroSceneBadge.addEventListener('click', () => toggleHeroLighting());
+      heroSceneBadge.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleHeroLighting();
+        }
+      });
+      heroSceneBadge.addEventListener('mouseenter', () => {
+        if (!heroLightingState && heroLightBlooms) {
+          heroLightBlooms.style.opacity = '0.22';
+        }
+      });
+      heroSceneBadge.addEventListener('mouseleave', () => {
+        if (!heroLightingState && heroLightBlooms) {
+          heroLightBlooms.style.opacity = '0';
+        }
+      });
+    }
+
+    // --- RESTRAINED EDITORIAL PARALLAX ON CURSOR MOVE ---
+    let targetX = 0;
+    let targetY = 0;
+    let currentX = 0;
+    let currentY = 0;
+    let parallaxActive = true;
+
+    if (heroSection) {
+      heroSection.addEventListener('mousemove', (e) => {
+        const rect = heroSection.getBoundingClientRect();
+        targetX = ((e.clientX - rect.left) / rect.width - 0.5) * 2; // -1 to 1
+        targetY = ((e.clientY - rect.top) / rect.height - 0.5) * 2; // -1 to 1
+      });
+
+      heroSection.addEventListener('mouseleave', () => {
+        targetX = 0;
+        targetY = 0;
+      });
+    }
+
+    function renderParallax() {
+      // Smooth lerp dampening for calm luxury feel
+      currentX += (targetX - currentX) * 0.045;
+      currentY += (targetY - currentY) * 0.045;
+
+      // Layer 1: Architecture Background (calm, subtle)
+      if (heroImageLayer) {
+        const bgX = currentX * 10;
+        const bgY = currentY * 8;
+        heroImageLayer.style.transform = `translate3d(${bgX.toFixed(2)}px, ${bgY.toFixed(2)}px, 0)`;
+      }
+
+      // Layer 2: Fixtures & Light Blooms (differential movement)
+      if (heroLightBlooms) {
+        const lightX = currentX * 14;
+        const lightY = currentY * 11;
+        heroLightBlooms.style.transform = `translate3d(${lightX.toFixed(2)}px, ${lightY.toFixed(2)}px, 0)`;
+      }
+
+      // Layer 3: Typography & Content (restrained subtle counter-drift)
+      if (heroContentLayer) {
+        const textX = currentX * -5;
+        const textY = currentY * -4;
+        heroContentLayer.style.transform = `translate3d(${textX.toFixed(2)}px, ${textY.toFixed(2)}px, 0)`;
+      }
+
+      requestAnimationFrame(renderParallax);
+    }
+    requestAnimationFrame(renderParallax);
+
+    // --- HEADER SCROLL TRANSITION (Transparent over Hero -> Solid Porcelain on Scroll) ---
+    function updateHeaderOnScroll() {
+      if (!siteHeader) return;
+      if (window.scrollY > 40) {
+        siteHeader.classList.remove('bg-transparent', 'border-transparent');
+        siteHeader.classList.add('bg-porcelain/95', 'backdrop-blur-md', 'border-cool-stone/70', 'shadow-sm');
+      } else {
+        siteHeader.classList.remove('bg-porcelain/95', 'backdrop-blur-md', 'border-cool-stone/70', 'shadow-sm');
+        siteHeader.classList.add('bg-transparent', 'border-transparent');
+      }
+    }
+    window.addEventListener('scroll', updateHeaderOnScroll, { passive: true });
+    updateHeaderOnScroll();
   </script>
 </body></html>
