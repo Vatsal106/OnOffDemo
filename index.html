@@ -123,12 +123,14 @@ Space Illumination · Click to turn ON
 <!-- Architectural Full-Bleed Background Container with Layered Parallax -->
 <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
 <div id="hero-image-layer" class="absolute inset-[-4%] w-[108%] h-[108%] will-change-transform">
-<!-- Architectural Interior Image with Dimmed Natural Daylight for Rich Contrast -->
-<img id="hero-photo" alt="Architectural lighting showroom interior featuring bespoke linear fixtures and concrete geometry" class="w-full h-full object-cover object-center transition-all duration-1000 ease-out filter saturate-[0.88] contrast-[1.16] brightness-[0.85]" src="hero-interior.jpg"/>
+<!-- Daylight Architectural Image (Natural Daylight Outside & Inside, Fixtures Inactive) -->
+<img id="hero-photo-day" alt="Architectural lighting showroom interior in natural daylight" class="absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000 ease-out filter saturate-[0.95] contrast-[1.02] brightness-[0.98]" src="hero-interior.jpg"/>
 
-<!-- Subdued Natural Daylight Architectural Dimmer & Vignette (Active in OFF state for rich contrast) -->
-<div id="hero-daylight-dimmer" class="absolute inset-0 bg-[#0F1419] opacity-[0.24] pointer-events-none transition-all duration-1000"></div>
-<div id="hero-ambient-daylight" class="absolute inset-0 bg-gradient-to-tr from-[#161D22]/25 via-transparent to-transparent pointer-events-none transition-opacity duration-1000"></div>
+<!-- Nighttime Architectural Image (Night & Starry Sky Outside, Warm Fixtures Illuminated Inside) -->
+<img id="hero-photo-night" alt="Architectural lighting showroom interior at night with warm illumination" class="absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000 ease-out opacity-0 filter saturate-[1.04] contrast-[1.06]" src="hero-interior-night.jpg"/>
+
+<!-- Daylight Ambient Wash (Active in OFF state) -->
+<div id="hero-ambient-daylight" class="absolute inset-0 bg-gradient-to-tr from-[#DCE0DD]/20 via-transparent to-transparent pointer-events-none transition-opacity duration-1000"></div>
 
 <!-- REALISTIC FIXTURE ILLUMINATION BLOOM LAYERS (Active when ON) -->
 <div id="hero-light-blooms" class="absolute inset-0 pointer-events-none opacity-0 transition-opacity duration-1000 ease-out will-change-transform">
@@ -173,9 +175,9 @@ Space Illumination · Click to turn ON
 <div class="absolute inset-0 bg-gradient-to-t from-[#FFD7A0]/10 via-transparent to-[#FFE0B2]/08 mix-blend-screen pointer-events-none"></div>
 </div>
 
-<!-- Editorial Architectural Overlay (Crisp contrast without washing out concrete architecture) -->
-<div class="absolute inset-0 bg-gradient-to-r from-porcelain/45 via-porcelain/15 to-transparent pointer-events-none"></div>
-<div class="absolute inset-0 bg-gradient-to-b from-[#161D22]/15 via-transparent to-[#161D22]/30 pointer-events-none"></div>
+<!-- Editorial Architectural Overlay (Soft left gradient for crisp headline contrast) -->
+<div class="absolute inset-0 bg-gradient-to-r from-porcelain/65 via-porcelain/25 to-transparent pointer-events-none"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-porcelain/40 via-transparent to-porcelain/60 pointer-events-none"></div>
 </div>
 </div>
 
@@ -1166,9 +1168,9 @@ Premium lighting for homes, workspaces and commercial interiors.
 
     const heroSection = document.getElementById('hero-experience-section');
     const heroImageLayer = document.getElementById('hero-image-layer');
-    const heroPhoto = document.getElementById('hero-photo');
+    const heroPhotoDay = document.getElementById('hero-photo-day');
+    const heroPhotoNight = document.getElementById('hero-photo-night');
     const heroLightBlooms = document.getElementById('hero-light-blooms');
-    const heroDaylightDimmer = document.getElementById('hero-daylight-dimmer');
     const heroContentLayer = document.getElementById('hero-content-layer');
     const heroStateDot = document.getElementById('hero-state-dot');
     const heroSceneBadge = document.getElementById('hero-scene-badge');
@@ -1176,52 +1178,40 @@ Premium lighting for homes, workspaces and commercial interiors.
     const heroBadgeDot = document.getElementById('hero-badge-dot');
     const heroBadgeText = document.getElementById('hero-badge-text');
 
-    // Toggle Hero Lighting Scene (OFF <-> ON)
+    // Toggle Hero Lighting Scene: Daylight (OFF) <-> Night with Warm Illumination (ON)
     function toggleHeroLighting(forceState) {
       heroLightingState = typeof forceState === 'boolean' ? forceState : !heroLightingState;
 
       if (heroLightingState) {
-        // --- TURNED ON (Warm physical architectural illumination around fixtures with dimmed natural daylight) ---
-        if (heroLightBlooms) {
-          heroLightBlooms.style.opacity = '1';
-        }
-        if (heroPhoto) {
-          heroPhoto.style.filter = 'saturate(1.12) contrast(1.22) brightness(0.80) sepia(0.06)';
-        }
-        if (heroDaylightDimmer) {
-          heroDaylightDimmer.style.opacity = '0.36';
-        }
+        // --- TURNED ON: NIGHTFALL OUTSIDE + WARM INTERIOR ILLUMINATION ---
+        if (heroPhotoDay) heroPhotoDay.style.opacity = '0';
+        if (heroPhotoNight) heroPhotoNight.style.opacity = '1';
+        if (heroLightBlooms) heroLightBlooms.style.opacity = '0.9';
 
         // Header Toggle Visuals
         if (headerLightToggle) headerLightToggle.setAttribute('aria-pressed', 'true');
         if (navBtnOff) navBtnOff.className = 'px-3.5 py-1 font-mono text-[11px] uppercase tracking-wider text-blue-gray hover:text-deep-slate transition-all duration-300';
         if (navBtnOn) navBtnOn.className = 'px-3.5 py-1 font-mono text-[11px] uppercase tracking-wider bg-deep-slate text-porcelain font-semibold transition-all duration-300';
         if (navToggleIndicator) navToggleIndicator.className = 'w-2 h-2 rounded-full bg-[#FFD7A0] shadow-[0_0_8px_#FFD7A0] transition-all duration-300';
-        if (navToggleTooltip) navToggleTooltip.textContent = 'Space Illumination · Click to turn OFF';
+        if (navToggleTooltip) navToggleTooltip.textContent = 'Space Illumination · Click for Daylight (OFF)';
 
         // Hero Telemetry Badges
         if (heroStateDot) heroStateDot.className = 'w-2 h-2 rounded-full bg-[#FFD7A0] shadow-[0_0_8px_#FFD7A0] transition-all duration-500';
         if (heroBadgeDot) heroBadgeDot.className = 'relative inline-flex rounded-full h-2 w-2 bg-[#FFD7A0]';
         if (heroBadgePing) heroBadgePing.className = 'animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FFD7A0] opacity-75';
-        if (heroBadgeText) heroBadgeText.textContent = 'Scene 02 · Illuminated Showroom (ON)';
+        if (heroBadgeText) heroBadgeText.textContent = 'Scene 02 · Nighttime Illumination (ON)';
       } else {
-        // --- TURNED OFF (Tranquil cool architectural space, dimmed natural daylight for high contrast) ---
-        if (heroLightBlooms) {
-          heroLightBlooms.style.opacity = '0';
-        }
-        if (heroPhoto) {
-          heroPhoto.style.filter = 'saturate(0.88) contrast(1.16) brightness(0.85)';
-        }
-        if (heroDaylightDimmer) {
-          heroDaylightDimmer.style.opacity = '0.24';
-        }
+        // --- TURNED OFF: NATURAL DAYLIGHT OUTSIDE + TRANQUIL ARCHITECTURAL SPACE ---
+        if (heroPhotoDay) heroPhotoDay.style.opacity = '1';
+        if (heroPhotoNight) heroPhotoNight.style.opacity = '0';
+        if (heroLightBlooms) heroLightBlooms.style.opacity = '0';
 
         // Header Toggle Visuals
         if (headerLightToggle) headerLightToggle.setAttribute('aria-pressed', 'false');
         if (navBtnOff) navBtnOff.className = 'px-3.5 py-1 font-mono text-[11px] uppercase tracking-wider bg-deep-slate text-porcelain font-semibold transition-all duration-300';
         if (navBtnOn) navBtnOn.className = 'px-3.5 py-1 font-mono text-[11px] uppercase tracking-wider text-blue-gray hover:text-deep-slate transition-all duration-300';
         if (navToggleIndicator) navToggleIndicator.className = 'w-2 h-2 rounded-full bg-cool-stone transition-all duration-300';
-        if (navToggleTooltip) navToggleTooltip.textContent = 'Space Illumination · Click to turn ON';
+        if (navToggleTooltip) navToggleTooltip.textContent = 'Space Illumination · Click for Nighttime (ON)';
 
         // Hero Telemetry Badges
         if (heroStateDot) heroStateDot.className = 'w-2 h-2 rounded-full bg-electric-blue transition-all duration-500';
@@ -1241,15 +1231,17 @@ Premium lighting for homes, workspaces and commercial interiors.
         }
       });
 
-      // Hover feedback: subtly indicate that it controls the lighting environment
+      // Hover feedback: subtly preview the night illumination
       headerLightToggle.addEventListener('mouseenter', () => {
-        if (!heroLightingState && heroLightBlooms) {
-          heroLightBlooms.style.opacity = '0.22';
+        if (!heroLightingState) {
+          if (heroPhotoNight) heroPhotoNight.style.opacity = '0.28';
+          if (heroLightBlooms) heroLightBlooms.style.opacity = '0.25';
         }
       });
       headerLightToggle.addEventListener('mouseleave', () => {
-        if (!heroLightingState && heroLightBlooms) {
-          heroLightBlooms.style.opacity = '0';
+        if (!heroLightingState) {
+          if (heroPhotoNight) heroPhotoNight.style.opacity = '0';
+          if (heroLightBlooms) heroLightBlooms.style.opacity = '0';
         }
       });
     }
