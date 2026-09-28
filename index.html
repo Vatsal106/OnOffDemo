@@ -1,272 +1,416 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-container": "#603c00", "on-primary-container": "#5f3c00", "primary": "#ffc16c", "secondary-fixed": "#e7e2d8", "surface-tint": "#ffb956", "inverse-on-surface": "#32302f", "primary-fixed-dim": "#ffb956", "error": "#ffb4ab", "outline-variant": "#514536", "surface-charcoal": "#1A1918", "border-hairline": "#2C2A28", "surface-container-high": "#2b2a28", "background": "#141312", "surface-container": "#211f1e", "surface-container-highest": "#363433", "on-tertiary": "#462b00", "tertiary-container": "#e3a550", "on-primary-fixed-variant": "#643f00", "primary-fixed": "#ffddb5", "filament-glow": "#FFAA2B", "surface-variant": "#363433", "on-error-container": "#ffdad6", "secondary-container": "#4b4942", "on-tertiary-fixed-variant": "#643f00", "on-secondary-fixed": "#1d1c16", "inverse-surface": "#e6e1df", "on-surface-variant": "#d6c4b0", "surface-bright": "#3a3938", "tertiary": "#ffc16e", "tertiary-fixed-dim": "#fbba63", "primary-container": "#e8a33d", "surface-container-low": "#1c1b1a", "canvas-light": "#F6F1E7", "on-primary-fixed": "#2a1800", "on-surface": "#e6e1df", "inverse-primary": "#835400", "secondary-fixed-dim": "#cac6bd", "on-background": "#e6e1df", "error-container": "#93000a", "surface-dim": "#141312", "outline": "#9e8e7c", "surface-container-lowest": "#0f0e0d", "tertiary-fixed": "#ffddb5", "on-secondary-container": "#bcb8af", "on-primary": "#462b00", "text-on-light": "#141312", "on-error": "#690005", "surface": "#141312", "on-secondary": "#32302a", "secondary": "#cac6bd", "on-tertiary-fixed": "#2a1800", "on-secondary-fixed-variant": "#494740" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1.25rem", "space-xs": "0.375rem", "space-lg": "2.25rem", "margin": "1.25rem", "gutter": "1.5rem", "margin-tablet": "2.5rem", "space-xl": "4rem", "space-sm": "0.75rem", "margin-desktop": "4.5rem", "gutter-desktop": "2.5rem" }, "fontFamily": { "headline-md-mobile": [ "Playfair Display" ], "headline-lg": [ "Playfair Display" ], "display-hero": [ "Playfair Display" ], "display-hero-mobile": [ "Playfair Display" ], "label-ui": [ "Space Grotesk" ], "headline-md": [ "Playfair Display" ], "body-md": [ "Space Grotesk" ], "body-lg": [ "Space Grotesk" ], "title-editorial": [ "Playfair Display" ], "caption-specs": [ "Space Grotesk" ], "body-sm": [ "Space Grotesk" ], "headline-sm": [ "Playfair Display" ], "headline-lg-mobile": [ "Playfair Display" ], "label-eyebrow": [ "Space Grotesk" ] }, "fontSize": { "headline-md-mobile": [ "26px", { "lineHeight": "34px", "letterSpacing": "0em", "fontWeight": "400" } ], "headline-lg": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "400" } ], "display-hero": [ "84px", { "lineHeight": "92px", "letterSpacing": "-0.02em", "fontWeight": "400" } ], "display-hero-mobile": [ "44px", { "lineHeight": "50px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "label-ui": [ "13px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" } ], "headline-md": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "body-md": [ "15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" } ], "body-lg": [ "18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "300" } ], "title-editorial": [ "20px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "caption-specs": [ "10px", { "lineHeight": "14px", "letterSpacing": "0.12em", "fontWeight": "500" } ], "body-sm": [ "13px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "headline-sm": [ "24px", { "lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "500" } ], "headline-lg-mobile": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "label-eyebrow": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.18em", "fontWeight": "600" } ] } } } }</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary"><header class="fixed top-0 left-0 w-full z-50 bg-[#171615]/85 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-20 w-full px-margin md:px-margin-tablet lg:px-margin-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm shrink-0"><img alt="ON OFF Lighting Co Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WnV9OIxttpgmNXWIwQAgmrB_5BKl4vrlehDBGwsDqjY45oD9HTxrXUUAIKZRPn_N6WsRzjoXF5ohbiE-1cO-YXfqYR4-4mWM2zCNce-va_FzKDM9fadkjDV4o62Lr9NuTT7JqobtnIIh2MfcJQsuwnMTUx02-TrlJZQTwi_IcdDKAEwD2K6PXxYLvftxeVFkcZxzTTkYsYJgy7PdfZOXs4LMZ6dAC2tLLr21Yh5ip37X_0jga-gChAhCk"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface leading-none uppercase">ON OFF</span><span class="font-caption-specs text-caption-specs tracking-widest text-on-surface-variant uppercase mt-1">Lighting Co · Surat</span></div></div><nav class="hidden xl:flex items-center gap-space-lg" data-active-classes="text-primary font-bold"><a class="font-label-ui text-label-ui uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" data-path="shop-by-room" href="#">Shop by Room</a><a class="font-label-ui text-label-ui uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" data-path="collections" href="#">Collections</a><a class="font-label-ui text-label-ui uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" data-path="our-showroom" href="#">Our Showroom</a><a class="font-label-ui text-label-ui uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" data-path="about" href="#">About</a><a class="font-label-ui text-label-ui uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" data-path="visit-us" href="#">Visit Us</a></nav><div class="flex items-center gap-space-md shrink-0"><div class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-low"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-filament-glow opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-filament-glow"></span></span><span class="font-caption-specs text-caption-specs uppercase tracking-wider text-on-surface-variant">Open now · 10:30 – 20:30</span></div><button aria-label="Search catalog" class="flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors p-2"><span class="material-symbols-outlined text-[20px]">search</span></button><a class="hidden md:flex items-center gap-2 px-4 py-2 bg-surface-container hover:bg-surface-container-high transition-colors" data-path="visit-us" href="#"><span class="material-symbols-outlined text-[16px] text-primary">calendar_today</span><span class="font-label-ui text-label-ui uppercase tracking-wider text-on-surface">Book Visit</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-background min-h-screen"><div class="flex flex-col w-full">
-<!-- 1. HERO SECTION (Full-bleed Dark Architectural Lighting) -->
-<section class="relative w-full -mt-20 overflow-hidden bg-background">
-<!-- Full-bleed visual under header -->
-<div class="relative min-h-[92vh] lg:min-h-screen w-full flex flex-col justify-end pt-28 pb-16 lg:pb-24 px-margin md:px-margin-tablet lg:px-margin-desktop">
-<!-- Background Image with Scrim -->
-<div class="absolute inset-0 z-0">
-<img alt="Sculptural illuminated brass pendant luminaire in minimalist concrete chamber" class="w-full h-full object-cover object-center scale-105 transition-transform duration-1000 ease-out hover:scale-100" src="https://lh3.googleusercontent.com/aida/AEtjO1WZbQCrZc1wakJ75m_z_-hBEDKaF5qU0IDN0FQCw093m90ba2WQI46koJC3ncv1jkVQCAMCGHfZFQ7H9WIuGAXRVHKALZ5y8PeHXjJ45Ji6_IWDOGiwCmiNBBy3L09enHnVPIsreI5VXPLQpL_rwDo01tQMmW2FMwHFPQ9KlCxRUq6GbZj-LSkzF0Hz40e1Rx2wVYLHAMpo0xz9CWSHcUJHPognaeqvIB_Dd95OeKELLeRaaAOlyeVNgDc"/>
-<!-- Multi-layer chiaroscuro gradient scrim -->
-<div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
-<div class="absolute inset-0 bg-gradient-to-r from-background/90 via-background/40 to-transparent"></div>
-<div class="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-background/90 to-transparent"></div>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_standard" name="shell-type"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    @layer base {
+      html, body { margin: 0; padding: 0; background-color: #F4F5F2; color: #293238; }
+      body { overscroll-behavior: none; }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { display: none; }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "porcelain": "#F4F5F2",
+            "mist-gray": "#E4E7E5",
+            "cool-stone": "#C9CFCC",
+            "deep-slate": "#293238",
+            "blue-gray": "#66757D",
+            "electric-blue": "#3D7EFF",
+            "surface-hairline": "rgba(41, 50, 56, 0.12)",
+            "primary": "#293238",
+            "background": "#F4F5F2",
+            "surface": "#F4F5F2",
+            "surface-container": "#E4E7E5",
+            "surface-container-high": "#DADEDC",
+            "surface-container-lowest": "#FFFFFF",
+            "on-surface": "#293238",
+            "on-surface-variant": "#66757D"
+          },
+          fontFamily: {
+            "display": ["Space Grotesk", "sans-serif"],
+            "headline": ["Space Grotesk", "sans-serif"],
+            "body": ["Inter", "-apple-system", "sans-serif"],
+            "mono": ["JetBrains Mono", "monospace"]
+          },
+          spacing: {
+            "gutter": "1.5rem",
+            "gutter-desktop": "2.5rem",
+            "margin": "1.25rem",
+            "margin-tablet": "2.5rem",
+            "margin-desktop": "4rem",
+            "space-xl": "4.5rem",
+            "space-lg": "2.25rem",
+            "space-md": "1.25rem",
+            "space-sm": "0.75rem",
+            "space-xs": "0.375rem"
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-porcelain font-body text-[15px] leading-relaxed text-deep-slate antialiased selection:bg-electric-blue selection:text-white">
+<!-- STICKY HEADER -->
+<header class="fixed top-0 left-0 w-full z-50 bg-porcelain/90 backdrop-blur-md border-b border-cool-stone/70">
+<div class="h-20 w-full px-margin md:px-margin-tablet lg:px-margin-desktop flex items-center justify-between gap-space-md">
+<!-- Logo lockup -->
+<a class="flex items-center gap-space-sm shrink-0 hover:opacity-90 transition-opacity" href="#">
+<img alt="On Off Lighting Co. Contemporary Logo" class="h-9 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WXsdRYGGjoDREnTosTYfYmxNp7sEd3tdEmeZ9yCKpOR7ptcl-yeMNmHD0HF5GRprWYhSb2odRjaAr5TX9mcc9BfPxJiur-W8FeApJOLvBr-2H8aaeTf7Il8mHHlPjTyXRtc8abHZgGubBplyiM5f-sqIMTZDcfM9VfOWoC0zAxkSBmsEaRAmakdMwMnTQn0OhRXNT-OMmWSf8cmIAIcU0sTIsqnWRTallq4K8zbZECYGm0StjFVXmSNg"/>
+</a>
+<!-- Desktop Nav -->
+<nav class="hidden xl:flex items-center gap-8">
+<a class="font-mono text-[12px] uppercase tracking-[0.14em] text-deep-slate hover:text-electric-blue transition-colors duration-200" href="#shop-by-room">Shop by Room</a>
+<a class="font-mono text-[12px] uppercase tracking-[0.14em] text-deep-slate hover:text-electric-blue transition-colors duration-200" href="#collections">Collections</a>
+<a class="font-mono text-[12px] uppercase tracking-[0.14em] text-deep-slate hover:text-electric-blue transition-colors duration-200" href="#brand-philosophy">Our Showroom</a>
+<a class="font-mono text-[12px] uppercase tracking-[0.14em] text-deep-slate hover:text-electric-blue transition-colors duration-200" href="#brand-philosophy">About</a>
+<a class="font-mono text-[12px] uppercase tracking-[0.14em] text-deep-slate hover:text-electric-blue transition-colors duration-200" href="#showroom">Visit Us</a>
+</nav>
+<!-- Action items -->
+<div class="flex items-center gap-4 shrink-0">
+<!-- Live Open Badge -->
+<div class="hidden sm:flex items-center gap-2 px-3 py-1.5 bg-mist-gray border border-surface-hairline">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-electric-blue opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-electric-blue"></span>
+</span>
+<span class="font-mono text-[11px] uppercase tracking-wider text-deep-slate font-medium">Open now · 10:30 – 20:30</span>
 </div>
-<!-- Hero Atmospheric Content -->
-<div class="relative z-10 max-w-4xl">
+<button aria-label="Search catalog" class="flex items-center justify-center text-deep-slate hover:text-electric-blue transition-colors p-2">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</button>
+<a class="hidden md:flex items-center gap-2 px-4 py-2 border border-deep-slate text-deep-slate hover:bg-deep-slate hover:text-porcelain transition-colors font-mono text-[11px] uppercase tracking-widest font-semibold" href="#showroom">
+<span class="material-symbols-outlined text-[15px]">calendar_today</span>
+<span>Book Visit</span>
+</a>
+<div class="w-8 h-8 bg-deep-slate text-porcelain flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">person</span>
+</div>
+</div>
+</div>
+</header>
+<main class="w-full pt-20 bg-porcelain min-h-screen">
+<div class="flex flex-col w-full">
+<!-- 1. HERO SECTION (Light & Cool Architectural Concrete Studio) -->
+<section class="relative w-full overflow-hidden bg-porcelain border-b border-cool-stone/60">
+<div class="grid grid-cols-1 lg:grid-cols-12 min-h-[calc(100vh-5rem)]">
+<!-- Left Text Column -->
+<div class="lg:col-span-6 flex flex-col justify-between p-margin md:p-margin-tablet lg:p-margin-desktop pt-12 lg:pt-20">
+<div class="max-w-xl">
 <!-- Eyebrow -->
-<div class="inline-flex items-center gap-2.5 px-3 py-1 bg-surface-charcoal/80 backdrop-blur-md mb-6 shadow-sm">
-<span class="inline-block w-1.5 h-1.5 rounded-full bg-filament-glow animate-pulse"></span>
-<span class="font-label-eyebrow text-label-eyebrow tracking-widest text-primary uppercase">PREMIUM LED LIGHTING · SURAT</span>
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-mist-gray border border-cool-stone mb-8">
+<span class="w-1.5 h-1.5 rounded-full bg-electric-blue"></span>
+<span class="font-mono text-[11px] uppercase tracking-[0.2em] text-blue-gray font-medium">LIGHTING STUDIO · SURAT / ARCHITECTURAL &amp; BESPOKE</span>
 </div>
-<!-- Headline -->
-<h1 class="font-display-hero text-headline-lg-mobile md:text-headline-lg lg:text-display-hero text-on-surface tracking-tight mb-6">
-          Light, Considered.
-        </h1>
-<!-- Subheading -->
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl font-light mb-10 leading-relaxed">
-          Boutique architectural luminaires and bespoke ambient illumination engineered for the most discerning residences, workspaces, and luxury hospitality across Gujarat.
-        </p>
+<!-- Main Headline -->
+<h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-deep-slate mb-6 leading-[1.08]">
+                Light, Considered.
+              </h1>
+<!-- Subtitle -->
+<p class="font-body text-base lg:text-lg text-blue-gray font-light leading-relaxed mb-10 max-w-lg">
+                Boutique architectural luminaires and bespoke illumination systems engineered for contemporary residences, commercial galleries, and luxury hospitality across Gujarat.
+              </p>
 <!-- CTAs -->
-<div class="flex flex-wrap items-center gap-4 sm:gap-6">
-<a class="group inline-flex items-center gap-3 px-7 py-3.5 bg-primary-container text-on-primary-container font-label-ui text-label-ui uppercase tracking-widest hover:bg-filament-glow transition-all duration-300 shadow-lg shadow-primary-container/20" href="#collections">
+<div class="flex flex-wrap items-center gap-4">
+<a class="inline-flex items-center gap-3 px-7 py-3.5 bg-deep-slate text-porcelain font-mono text-[12px] uppercase tracking-widest font-semibold hover:bg-electric-blue transition-colors duration-200" href="#collections">
 <span>Explore the Collection</span>
-<span class="material-symbols-outlined text-[16px] transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
 </a>
-<a class="inline-flex items-center gap-2.5 px-7 py-3.5 bg-surface-charcoal/70 text-on-surface font-label-ui text-label-ui uppercase tracking-widest hover:bg-surface-container transition-all duration-300 backdrop-blur-sm" href="#showroom">
+<a class="inline-flex items-center gap-2.5 px-6 py-3.5 border border-deep-slate text-deep-slate font-mono text-[12px] uppercase tracking-widest font-semibold hover:bg-mist-gray transition-colors duration-200" href="#showroom">
 <span>Visit Our Showroom</span>
-<span class="material-symbols-outlined text-[16px] text-primary">location_on</span>
+<span class="material-symbols-outlined text-[16px] text-electric-blue">location_on</span>
 </a>
 </div>
 </div>
-<!-- Hero Floating Spec Callout (Desktop Asymmetric Lockup) -->
-<div class="hidden lg:flex absolute bottom-24 right-margin-desktop z-10 flex-col items-end text-right">
-<div class="p-5 bg-surface-charcoal/85 backdrop-blur-md max-w-xs shadow-2xl">
-<div class="flex items-center justify-end gap-2 mb-2">
-<span class="font-caption-specs text-caption-specs uppercase tracking-widest text-primary">Optical Standard</span>
-<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<!-- Optical Standard Metadata Strip -->
+<div class="mt-12 pt-8 border-t border-cool-stone/80 grid grid-cols-3 gap-4">
+<div>
+<span class="font-mono text-[10px] uppercase tracking-widest text-blue-gray block mb-1">Color Fidelity</span>
+<span class="font-mono text-[13px] text-deep-slate font-medium">CRI 98+ Standard</span>
 </div>
-<p class="font-label-ui text-label-ui text-on-surface font-medium mb-1">CRI 98+ · 2700K Warm Filament</p>
-<p class="font-caption-specs text-caption-specs text-on-surface-variant tracking-wider uppercase">Precision Optical Dimmable · DALI-2 Certified</p>
+<div>
+<span class="font-mono text-[10px] uppercase tracking-widest text-blue-gray block mb-1">Architecture</span>
+<span class="font-mono text-[13px] text-deep-slate font-medium">DALI-2 Certified</span>
+</div>
+<div>
+<span class="font-mono text-[10px] uppercase tracking-widest text-blue-gray block mb-1">Spectrum</span>
+<span class="font-mono text-[13px] text-deep-slate font-medium">1800K–4000K</span>
+</div>
+</div>
+</div>
+<!-- Right Image Column (Architectural Showcase) -->
+<div class="lg:col-span-6 relative bg-mist-gray border-t lg:border-t-0 lg:border-l border-cool-stone overflow-hidden flex items-center justify-center">
+<img alt="Minimalist architectural lighting showroom gallery with concrete walls and microcement floor" class="w-full h-full object-cover object-center min-h-[460px] lg:min-h-full" src="https://lh3.googleusercontent.com/aida/AEtjO1XmcrBQovbizPIb1cFmhl5ZI0Cz6xMcGWxIeIBjVIiUrCmeAHwWVrtzbjvJp8Ks0hNzArWLaUbmRp3PfMEFm8NPeWqxsy7vpmaHLxre8LzmYIMiE27nMwazgqtTjideVFwGsjKtk5VmJsGWyTvGVLB89n2bNPoE8vXyf75BZrEkBqYkfMYtWPffnIKQ0bTe7yYAMPGCwE0f_fa6QUbQRCRolJnbFqxn8N_93Y8FjW7qLZ-WDJrPskpzosQ"/>
+<!-- Subtle architectural overlay chip -->
+<div class="absolute bottom-6 right-6 p-4 bg-porcelain/95 border border-cool-stone backdrop-blur-sm max-w-xs shadow-sm">
+<div class="flex items-center gap-2 mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-electric-blue"></span>
+<span class="font-mono text-[10px] uppercase tracking-widest text-deep-slate font-semibold">Exhibition Pavilion N° 01</span>
+</div>
+<p class="font-body text-[12px] text-blue-gray">Precision linear profiles suspended against honed microcement surfaces · Surat</p>
 </div>
 </div>
 </div>
 </section>
-<!-- 2. "FLIP THE SWITCH" TACTILE INTERACTIVE LAMP SCENE -->
-<section class="w-full transition-colors duration-1000 py-space-xl px-margin md:px-margin-tablet lg:px-margin-desktop" id="flip-the-switch-section" style="background-color: #141312;">
+<!-- 2. "FLIP THE SWITCH" ASYMMETRIC EDITORIAL INTERIOR ARCHITECTURAL SCENE -->
+<section class="w-full py-space-xl px-margin md:px-margin-tablet lg:px-margin-desktop bg-porcelain border-b border-cool-stone/60" id="flip-the-switch-section">
 <div class="max-w-7xl mx-auto">
-<!-- Section Header -->
-<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
+<!-- 1. Editorial Left Column (~35% width -> 4.5 cols out of 12) -->
+<div class="lg:col-span-4 flex flex-col justify-between py-2 lg:py-6 pr-0 lg:pr-4">
 <div>
-<div class="flex items-center gap-2 mb-3">
-<span class="w-2 h-2 rounded-full bg-filament-glow"></span>
-<span class="font-label-eyebrow text-label-eyebrow uppercase tracking-widest text-primary">INTERACTIVE SHOWCASE · EXPERIENCE</span>
+<!-- Eyebrow -->
+<div class="inline-flex items-center gap-2 mb-6">
+<span class="w-2 h-2 rounded-full bg-electric-blue"></span>
+<span class="font-mono text-[11px] uppercase tracking-[0.22em] text-deep-slate font-semibold">PHYSICAL ILLUMINATION</span>
 </div>
-<h2 class="font-headline-lg text-headline-md md:text-headline-lg text-on-surface tracking-tight">Flip the Switch</h2>
+<!-- Large architectural headline in Space Grotesk -->
+<h2 class="font-display text-4xl sm:text-5xl text-deep-slate tracking-tight font-medium mb-6 leading-[1.12]">
+              Flip the<br class="hidden sm:inline"/> Switch.
+            </h2>
+<!-- Editorial prose -->
+<p class="font-body text-[15px] lg:text-[16px] text-blue-gray font-light leading-relaxed max-w-sm mb-8">
+              Some things are better experienced than explained. A tactile exploration of domestic warmth inside contemporary architectural space.
+            </p>
 </div>
-<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
-          Experience how ambient luminosity, Kelvin temperatures, and chiaroscuro shadows redefine architectural geometry in real-time.
-        </p>
+<!-- Minimalist typographic hint / micro-caption near bottom -->
+<div class="pt-8 border-t border-cool-stone/60 mt-auto">
+<div class="flex items-center gap-3 select-none text-deep-slate/80">
+<span class="font-mono text-[11px] uppercase tracking-[0.25em] font-semibold text-deep-slate">PULL THE CORD</span>
+<span class="inline-block w-8 h-[1px] bg-deep-slate/40"></span>
+<span class="material-symbols-outlined text-[15px] text-electric-blue animate-bounce">arrow_downward</span>
 </div>
-<!-- Interactive Lamp Studio Canvas -->
-<div class="relative w-full rounded-xl overflow-hidden shadow-2xl border border-border-hairline transition-all duration-1000" id="lamp-stage-wrapper" style="background: radial-gradient(ellipse at 50% 40%, rgba(25, 23, 21, 1) 0%, rgba(12, 11, 10, 1) 100%);">
-<!-- Subtle Wall Texture / Architectural Plaster Backdrop Grid -->
-<div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px); background-size: 40px 40px;"></div>
-<!-- Warm Atmospheric Bloom Layers (Controlled by state) -->
-<div class="absolute left-1/2 -translate-x-1/2 top-4 w-[600px] h-[340px] pointer-events-none rounded-full blur-[90px] transition-opacity duration-1000 opacity-0 bg-[#FFAA2B]/25" id="ambient-bloom-top"></div>
-<div class="absolute left-1/2 -translate-x-1/2 top-28 w-[820px] h-[520px] pointer-events-none rounded-[50%] blur-[120px] transition-opacity duration-1000 opacity-0 bg-[#E8A33D]/20" id="ambient-bloom-cone"></div>
-<div class="absolute left-1/2 -translate-x-1/2 bottom-12 w-[680px] h-[180px] pointer-events-none rounded-full blur-[65px] transition-opacity duration-1000 opacity-0 bg-[#FFAA2B]/30" id="ambient-bloom-table"></div>
-<!-- HUD Control Bar -->
-<div class="relative z-20 flex flex-wrap items-center justify-between gap-4 p-6 md:p-8 border-b border-border-hairline/60 bg-surface-container-lowest/60 backdrop-blur-md">
-<div class="flex items-center gap-3">
-<span class="font-caption-specs text-caption-specs uppercase tracking-widest text-outline">ATELIER FIXTURE</span>
-<span class="px-2.5 py-1 bg-surface-charcoal border border-border-hairline font-caption-specs text-caption-specs text-primary uppercase">MANTLE CERAMIQUE · N° 07</span>
-<span class="hidden sm:inline-block w-1.5 h-1.5 rounded-full bg-border-hairline"></span>
-<span class="hidden sm:inline-block font-caption-specs text-caption-specs uppercase tracking-wider text-on-surface-variant">Handcrafted in Surat</span>
-</div>
-<!-- Manual State Selector & Pull Hint -->
-<div class="flex items-center gap-4">
-<span class="hidden lg:inline-block font-caption-specs text-caption-specs uppercase tracking-widest text-on-surface-variant">SWITCH PROTOCOL</span>
-<div class="flex items-center bg-surface-container-lowest p-1 border border-border-hairline rounded">
-<button class="px-4 py-1.5 font-label-ui text-label-ui uppercase tracking-wider bg-surface-container-high text-on-surface font-bold shadow-sm transition-all" id="lamp-btn-off" onclick="toggleTactileLamp(false)">
-          OFF
-        </button>
-<button class="px-4 py-1.5 font-label-ui text-label-ui uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" id="lamp-btn-on" onclick="toggleTactileLamp(true)">
-          ON
-        </button>
+<p class="font-mono text-[10px] uppercase tracking-wider text-blue-gray mt-2">
+              Drag down or click toggle cord · 2400K incandescent filament
+            </p>
 </div>
 </div>
+<!-- 2. Editorial Interior Scene Vignette (~65% width -> 8 cols out of 12) -->
+<div class="lg:col-span-8 relative border border-cool-stone overflow-hidden select-none bg-[#E7EAE7] min-h-[580px] lg:min-h-[640px] flex items-stretch shadow-[inset_0_1px_2px_rgba(0,0,0,0.03)]" id="arch-scene-container">
+<!-- Microcement / Concrete corner walls with subtle shadow perspective -->
+<div class="absolute inset-0 pointer-events-none transition-colors duration-700 ease-out" id="wall-corner-bg">
+<!-- Left architectural return wall -->
+<div class="absolute inset-y-0 left-0 w-[42%] bg-gradient-to-r from-[#DCE0DD] to-[#E3E7E4] border-r border-cool-stone/40"></div>
+<!-- Right wall plane -->
+<div class="absolute inset-y-0 right-0 left-[42%] bg-[#E8EBE8]"></div>
+<!-- Floor microcement plane perspective -->
+<div class="absolute bottom-0 inset-x-0 h-44 bg-gradient-to-t from-[#D6DCD7] via-[#DFE4E0] to-[#E8EBE8] border-t border-cool-stone/50"></div>
+<!-- Fine subtle architectural joints line -->
+<div class="absolute top-0 bottom-44 left-[42%] w-[1px] bg-cool-stone/40"></div>
 </div>
-<!-- Central Tactile Lamp Rig Stage -->
-<div class="relative w-full min-h-[500px] md:min-h-[560px] flex flex-col items-center justify-end pb-0 overflow-hidden select-none">
-<!-- Radial Halo Behind Lampshade (Active when ON) -->
-<div class="absolute top-[16%] left-1/2 -translate-x-1/2 w-72 h-72 md:w-96 md:h-96 rounded-full pointer-events-none transition-all duration-700 opacity-0 scale-90 blur-2xl" id="lamp-core-aura" style="background: radial-gradient(circle, rgba(255, 185, 86, 0.45) 0%, rgba(232, 163, 61, 0.18) 45%, transparent 70%);"></div>
-<!-- Rich SVG Architectural Lamp & Pull-Cord Construct -->
-<div class="relative z-10 w-full max-w-[520px] h-[460px] md:h-[500px] flex items-end justify-center">
-<svg class="w-full h-full overflow-visible" viewbox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+<!-- REALISTIC NATURAL ILLUMINATION BLOOM LAYERS (Physical falloff, active when ON) -->
+<!-- 1. Authentic asymmetric pool on back concrete wall (soft penumbra cast) -->
+<div class="absolute top-[8%] left-[44%] -translate-x-1/2 w-[580px] h-[520px] pointer-events-none rounded-[50%_45%_60%_40%] blur-[95px] opacity-0 transition-opacity duration-700 ease-out bg-[#FFCD86]/55" id="light-cast-wall"></div>
+<!-- 2. Upward diffused cone wash -->
+<div class="absolute top-0 left-[48%] -translate-x-1/2 w-[420px] h-[260px] pointer-events-none rounded-b-[100%] blur-[70px] opacity-0 transition-opacity duration-700 ease-out bg-[#FFE2B3]/45" id="light-cast-ceiling"></div>
+<!-- 3. Tabletop directional grazing sweep (warm directional wash on ash/travertine) -->
+<div class="absolute top-[52%] left-[30%] w-[500px] h-[190px] pointer-events-none rounded-[40%] blur-[48px] opacity-0 transition-opacity duration-700 ease-out bg-[#FFDAA0]/80" id="light-cast-table"></div>
+<!-- 4. Ambient architectural bounce light -->
+<div class="absolute inset-0 pointer-events-none opacity-0 transition-opacity duration-700 ease-out bg-gradient-to-br from-[#FFE7C4]/20 via-transparent to-transparent" id="light-cast-ambient"></div>
+<!-- THE INTERIOR VIGNETTE STAGE (Grounded bespoke console, realistic designer lamp, curated objects & pull cord) -->
+<div class="relative z-10 w-full h-full flex flex-col justify-end items-center px-4 sm:px-10 pb-10">
+<div class="relative w-full max-w-[620px] h-[520px] flex items-end justify-center">
+<svg class="w-full h-full overflow-visible" id="arch-interior-svg" preserveaspectratio="xMidYMax meet" viewbox="0 0 620 520" xmlns="http://www.w3.org/2000/svg">
 <defs>
-<!-- Shade OFF Gradients -->
-<lineargradient id="shadeOffGrad" x1="0%" x2="100%" y1="0%" y2="0%">
-<stop offset="0%" stop-color="#1f1e1d"></stop>
-<stop offset="25%" stop-color="#383633"></stop>
-<stop offset="60%" stop-color="#2d2b29"></stop>
-<stop offset="100%" stop-color="#191817"></stop>
+<!-- LINEN SHADE OFF: Cool natural linen texture & fibers -->
+<lineargradient id="shadeNaturalOff" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#D5DAD6"></stop>
+<stop offset="25%" stop-color="#E5E9E6"></stop>
+<stop offset="60%" stop-color="#DEE3E0"></stop>
+<stop offset="100%" stop-color="#CBD1CE"></stop>
 </lineargradient>
-<!-- Shade ON Illuminated Warm Amber Radiant Gradient -->
-<lineargradient id="shadeOnGrad" x1="0%" x2="100%" y1="0%" y2="0%">
-<stop offset="0%" stop-color="#E8A33D"></stop>
-<stop offset="20%" stop-color="#FFAA2B"></stop>
-<stop offset="50%" stop-color="#FFF2DC"></stop>
-<stop offset="80%" stop-color="#FFBD69"></stop>
-<stop offset="100%" stop-color="#DF9529"></stop>
+<!-- LINEN SHADE ON: Translucent warm 2400K filament bloom -->
+<lineargradient id="shadeWarmOn" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#F2BA74"></stop>
+<stop offset="20%" stop-color="#FFE0B0"></stop>
+<stop offset="50%" stop-color="#FFFDF7"></stop>
+<stop offset="80%" stop-color="#FFD694"></stop>
+<stop offset="100%" stop-color="#E8A959"></stop>
 </lineargradient>
-<!-- Shade Ribbing Texture Pattern -->
-<pattern height="6" id="linenWeave" patternunits="userSpaceOnUse" width="6">
-<line stroke="rgba(0,0,0,0.12)" stroke-width="1" x1="0" x2="6" y1="0" y2="0"></line>
-<line stroke="rgba(255,255,255,0.04)" stroke-width="1" x1="0" x2="0" y1="0" y2="6"></line>
-</pattern>
-<!-- Ceramic Base Glaze Gradient (Dark Chiaroscuro) -->
-<lineargradient id="ceramicBaseOff" x1="0%" x2="100%" y1="0%" y2="0%">
-<stop offset="0%" stop-color="#0e0d0d"></stop>
-<stop offset="28%" stop-color="#2c2a28"></stop>
-<stop offset="55%" stop-color="#1c1b1a"></stop>
-<stop offset="100%" stop-color="#0a0909"></stop>
+<!-- LAMP FLUTED TRAVERTINE BASE OFF -->
+<lineargradient id="travertineBaseOff" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#A2ABA8"></stop>
+<stop offset="25%" stop-color="#CAD0CD"></stop>
+<stop offset="65%" stop-color="#B8BFBD"></stop>
+<stop offset="100%" stop-color="#939D9B"></stop>
 </lineargradient>
-<!-- Ceramic Base ON Gradient with Warm Specular Highlight -->
-<lineargradient id="ceramicBaseOn" x1="0%" x2="100%" y1="0%" y2="0%">
-<stop offset="0%" stop-color="#181512"></stop>
-<stop offset="25%" stop-color="#70502e"></stop>
-<stop offset="42%" stop-color="#FFAA2B"></stop>
-<stop offset="60%" stop-color="#4e3722"></stop>
-<stop offset="100%" stop-color="#151210"></stop>
+<!-- LAMP FLUTED TRAVERTINE BASE ON (Grazed with warm incandescent light) -->
+<lineargradient id="travertineBaseOn" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#8E8578"></stop>
+<stop offset="30%" stop-color="#E4C8A6"></stop>
+<stop offset="60%" stop-color="#FFDCAD"></stop>
+<stop offset="85%" stop-color="#C2A889"></stop>
+<stop offset="100%" stop-color="#7C7368"></stop>
 </lineargradient>
-<!-- Console Dark Wood Surface Gradient -->
-<lineargradient id="woodSurfaceOff" x1="0%" x2="100%" y1="0%" y2="0%">
-<stop offset="0%" stop-color="#121110"></stop>
-<stop offset="50%" stop-color="#1e1c1a"></stop>
-<stop offset="100%" stop-color="#121110"></stop>
+<!-- BESPOKE PALE ASH / TRAVERTINE TABLE TOP OFF -->
+<lineargradient id="tableTopOff" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#CFD5D1"></stop>
+<stop offset="50%" stop-color="#DEE3DF"></stop>
+<stop offset="100%" stop-color="#CCD2CE"></stop>
 </lineargradient>
-<!-- Console Wood Surface ON Gradient (Warm reflected glow) -->
-<lineargradient id="woodSurfaceOn" x1="0%" x2="100%" y1="0%" y2="0%">
-<stop offset="0%" stop-color="#1a1816"></stop>
-<stop offset="30%" stop-color="#3d2d1e"></stop>
-<stop offset="50%" stop-color="#734e26"></stop>
-<stop offset="70%" stop-color="#3d2d1e"></stop>
-<stop offset="100%" stop-color="#1a1816"></stop>
+<!-- BESPOKE TABLE TOP ON (Gleaming surface warmth) -->
+<lineargradient id="tableTopOn" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#C7C4BE"></stop>
+<stop offset="20%" stop-color="#F2DEC2"></stop>
+<stop offset="50%" stop-color="#FFEAC4"></stop>
+<stop offset="75%" stop-color="#ECD4B4"></stop>
+<stop offset="100%" stop-color="#C9C2BA"></stop>
 </lineargradient>
-<!-- Brass Bead Metal Gradient -->
-<lineargradient id="brassGrad" x1="0%" x2="100%" y1="0%" y2="100%">
-<stop offset="0%" stop-color="#FFDE9E"></stop>
-<stop offset="45%" stop-color="#FFAA2B"></stop>
-<stop offset="75%" stop-color="#A56E1A"></stop>
-<stop offset="100%" stop-color="#6E4810"></stop>
+<!-- Table Front Apron Off / On -->
+<lineargradient id="tableApronOff" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#B0B7B3"></stop>
+<stop offset="100%" stop-color="#9DA5A1"></stop>
 </lineargradient>
-<filter height="180%" id="glowFilt" width="180%" x="-40%" y="-40%">
-<fegaussianblur result="blur" stddeviation="16"></fegaussianblur>
-<fecomposite in="SourceGraphic" in2="blur" operator="over"></fecomposite>
+<lineargradient id="tableApronOn" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#BDB1A0"></stop>
+<stop offset="40%" stop-color="#D6BEA0"></stop>
+<stop offset="100%" stop-color="#8F877B"></stop>
+</lineargradient>
+<!-- Architectural Penumbra / Drop Shadow Filters -->
+<filter height="150%" id="floorDropShadow" width="130%" x="-15%" y="-20%">
+<fegaussianblur in="SourceAlpha" stddeviation="6"></fegaussianblur>
+<feoffset dx="0" dy="7" result="offsetblur"></feoffset>
+<fecomponenttransfer><fefunca slope="0.22" type="linear"></fefunca></fecomponenttransfer>
+<femerge>
+<femergenode></femergenode>
+<femergenode in="SourceGraphic"></femergenode>
+</femerge>
+</filter>
+<filter height="200%" id="lampWarmGlow" width="200%" x="-50%" y="-50%">
+<fegaussianblur stddeviation="16"></fegaussianblur>
 </filter>
 </defs>
-<!-- Upward Light Aperture Beam Cone (Shown when ON) -->
-<polygon class="transition-opacity duration-700 pointer-events-none" fill="url(#shadeOnGrad)" id="svg-top-beam" opacity="0" points="210,120 120,0 380,0 290,120" style="filter: blur(28px); mix-blend-mode: screen;"></polygon>
-<!-- Downward Warm Spill Cone (Shown when ON) -->
-<polygon class="transition-opacity duration-700 pointer-events-none" fill="#FFAA2B" id="svg-bottom-beam" opacity="0" points="160,250 10,450 490,450 340,250" style="filter: blur(42px); mix-blend-mode: screen;"></polygon>
-<!-- TABLE CONSOLE / SURFACE -->
-<!-- Front Console Edge Facet -->
-<polygon class="transition-all duration-700" fill="url(#woodSurfaceOff)" id="table-top-facet" points="30,455 470,455 490,478 10,478" stroke="#262422" stroke-width="1"></polygon>
-<!-- Front Console Face -->
-<rect fill="#0d0c0b" height="24" stroke="#1c1a18" stroke-width="1" width="480" x="10" y="478"></rect>
-<line opacity="0.6" stroke="#33302c" stroke-width="1" x1="10" x2="490" y1="478" y2="478"></line>
-<!-- LAMP PEDESTAL / MAT BASE -->
-<ellipse cx="250" cy="454" fill="#0b0a09" opacity="0.9" rx="72" ry="10"></ellipse>
-<!-- Brass Foot Ring -->
-<ellipse cx="250" cy="452" fill="url(#brassGrad)" rx="58" ry="7" stroke="#53370e" stroke-width="1"></ellipse>
-<!-- ARTISANAL CERAMIC SCULPTED BASE -->
-<!-- Base Body Silhouette & Form -->
-<path class="transition-all duration-700" d="
-          M 215,448
-          C 200,435 185,395 190,360
-          C 195,325 220,310 228,290
-          C 232,280 234,260 235,250
-          L 265,250
-          C 266,260 268,280 272,290
-          C 280,310 305,325 310,360
-          C 315,395 300,435 285,448
-          Z" fill="url(#ceramicBaseOff)" id="ceramic-vase-body" stroke="#2d2a27" stroke-width="1"></path>
-<!-- Ceramic Rib / Artisanal Horizontal Incisions -->
-<path d="M 194,360 Q 250,372 306,360" fill="none" opacity="0.6" stroke="#181615" stroke-width="1.5"></path>
-<path d="M 204,395 Q 250,408 296,395" fill="none" opacity="0.6" stroke="#181615" stroke-width="1.5"></path>
-<path d="M 226,305 Q 250,314 274,305" fill="none" opacity="0.5" stroke="#181615" stroke-width="1"></path>
-<!-- Ceramic Base Specular Glaze Sheen (Lights up when ON) -->
-<path class="transition-opacity duration-700" d="
-          M 230,290
-          C 222,310 205,325 200,360
-          C 196,390 206,425 218,442" fill="none" id="ceramic-sheen" opacity="0" stroke="#FFAA2B" stroke-linecap="round" stroke-width="5" style="filter: blur(4px);"></path>
-<!-- Brass Lamp Neck / Socket Collar -->
-<rect fill="url(#brassGrad)" height="12" rx="1.5" stroke="#5d3f11" stroke-width="1" width="16" x="242" y="240"></rect>
-<line stroke="#3d2707" stroke-width="1" x1="240" x2="260" y1="248" y2="248"></line>
-<!-- TAPERED FABRIC / LINEN SHADE -->
-<g class="transition-all duration-700" id="lamp-shade-group">
-<!-- Shade Body -->
-<polygon class="transition-all duration-700" fill="url(#shadeOffGrad)" id="lamp-shade-body" points="208,124 292,124 345,250 155,250" stroke="#322e2b" stroke-width="1.5"></polygon>
-<!-- Linen Texture Overlay -->
-<polygon fill="url(#linenWeave)" opacity="0.3" pointer-events="none" points="208,124 292,124 345,250 155,250"></polygon>
-<!-- Top Brass Rim / Finial Ring -->
-<ellipse class="transition-all duration-700" cx="250" cy="124" fill="#242220" id="shade-top-rim" rx="42" ry="7" stroke="#3a3733" stroke-width="1"></ellipse>
-<!-- Brass Finial Stud -->
-<circle cx="250" cy="118" fill="url(#brassGrad)" r="4.5" stroke="#53370e" stroke-width="0.8"></circle>
-<!-- Bottom Shade Rim Lip -->
-<ellipse class="transition-all duration-700" cx="250" cy="250" fill="#1b1a19" id="shade-bottom-rim" rx="95" ry="12" stroke="#35312d" stroke-width="1"></ellipse>
+<!-- 1. REALISTIC GROUNDED BESPOKE SIDE TABLE / CONSOLE IN PALE ASH & TRAVERTINE -->
+<!-- Table legs floor contact shadows -->
+<ellipse cx="108" cy="505" fill="#293238" opacity="0.2" rx="14" ry="4"></ellipse>
+<ellipse cx="512" cy="505" fill="#293238" opacity="0.2" rx="14" ry="4"></ellipse>
+<ellipse cx="148" cy="485" fill="#293238" opacity="0.14" rx="12" ry="3.5"></ellipse>
+<ellipse cx="472" cy="485" fill="#293238" opacity="0.14" rx="12" ry="3.5"></ellipse>
+<!-- Ambient floor contact shadow directly beneath table body -->
+<path d="M 90 495 L 530 495 L 490 515 L 130 515 Z" fill="#293238" opacity="0.18" style="filter: blur(8px);"></path>
+<!-- Back table legs (travertine monolithic profile) -->
+<polygon fill="#A7B0AC" id="table-leg-back-l" points="144,380 152,380 150,485 142,485"></polygon>
+<polygon fill="#A2ABA7" id="table-leg-back-r" points="468,380 476,380 474,485 466,485"></polygon>
+<!-- Front table legs (pale ash with subtle taper & chamfer) -->
+<polygon class="transition-colors duration-500" fill="#BBC2BE" id="table-leg-front-l" points="102,380 114,380 112,505 100,505"></polygon>
+<polygon class="transition-colors duration-500" fill="#9EA7A3" points="114,380 118,380 116,505 112,505"></polygon>
+<polygon class="transition-colors duration-500" fill="#B4BCB8" id="table-leg-front-r" points="506,380 518,380 516,505 504,505"></polygon>
+<polygon class="transition-colors duration-500" fill="#9CA4A0" points="518,380 522,380 520,505 516,505"></polygon>
+<!-- Table cross-apron fascia -->
+<rect class="transition-all duration-700" fill="url(#tableApronOff)" height="14" id="table-apron" width="418" x="102" y="375"></rect>
+<rect fill="#293238" height="1" opacity="0.12" width="418" x="102" y="389"></rect>
+<!-- Table top surface slab (3D angled facet with realistic depth) -->
+<g class="transition-all duration-700" id="table-top-group">
+<!-- Under-bevel -->
+<polygon fill="#A3ABA7" points="80,375 540,375 528,381 92,381"></polygon>
+<!-- Front edge thickness -->
+<rect class="transition-all duration-700" fill="#CCD2CE" height="6" id="table-edge" width="460" x="80" y="369"></rect>
+<!-- Top honed surface plane -->
+<polygon class="transition-all duration-700" fill="url(#tableTopOff)" id="table-top-surface" points="112,336 508,336 540,369 80,369"></polygon>
+<!-- Subtle perimeter pencil bevel line -->
+<polygon fill="none" points="112,336 508,336 540,369 80,369" stroke="#C0C7C3" stroke-width="0.75"></polygon>
 </g>
-<!-- PULL CORD / FINIAL RIG (Clickable & Tactile Animated) -->
-<g class="cursor-pointer group" id="pull-cord-interactive-group" onclick="triggerPullCordAction()" style="transform-origin: 282px 248px; transition: transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);">
-<!-- Cord Anchor Eyelet under shade -->
-<circle cx="282" cy="249" fill="url(#brassGrad)" r="3.5" stroke="#4a310c" stroke-width="1"></circle>
-<!-- Suspended Chain / Beaded Cord Line -->
-<line id="cord-line" stroke="#c49448" stroke-dasharray="1 3" stroke-linecap="round" stroke-width="2" x1="282" x2="282" y1="250" y2="346"></line>
-<!-- Weighted Solid Brass Teardrop Finial / Bead -->
-<g class="transition-transform duration-100 ease-out" id="cord-bead">
-<!-- Subtle finial glow halo on hover -->
-<circle class="opacity-0 group-hover:opacity-100 transition-opacity" cx="282" cy="358" fill="rgba(232, 163, 61, 0.15)" r="16"></circle>
-<!-- Teardrop Brass Geometry -->
-<path d="M 282,346 C 285,349 288,353 288,358 C 288,362 285.3,365 282,365 C 278.7,365 276,362 276,358 C 276,353 279,349 282,346 Z" fill="url(#brassGrad)" stroke="#5c3d0f" stroke-width="1"></path>
-<circle cx="282" cy="358" fill="#FFEAC2" r="2.5"></circle>
-<!-- Tactile Ripples / Pull Hint Arrow Indicator -->
-<circle class="group-hover:animate-ping" cx="282" cy="358" fill="none" opacity="0.4" r="8" stroke="#FFAA2B" stroke-width="1"></circle>
+<!-- 2. CURATED OBJECTS ON CONSOLE (Architectural art monograph & ceramic pebble tray) -->
+<!-- Object A: Hardcover architectural monograph book -->
+<g id="curated-book">
+<!-- Book contact shadow -->
+<polygon fill="#293238" opacity="0.22" points="384,354 466,354 472,367 390,367" style="filter: blur(2px);"></polygon>
+<!-- Book block pages thickness -->
+<polygon fill="#EAECE9" points="385,357 387,364 463,364 461,357"></polygon>
+<!-- Book cover (deep slate clothbound) -->
+<polygon fill="#293238" id="book-cover" points="388,348 460,348 464,358 392,358"></polygon>
+<!-- Title spine & debossed label -->
+<line stroke="#E4E7E5" stroke-width="1.2" x1="395" x2="455" y1="353" y2="353"></line>
+<line stroke="#3D7EFF" stroke-width="1" x1="395" x2="415" y1="355.5" y2="355.5"></line>
+</g>
+<!-- Object B: Small sculpted ceramic pebble catch-all tray -->
+<g id="curated-tray">
+<ellipse cx="178" cy="358" fill="#293238" opacity="0.18" rx="22" ry="7" style="filter: blur(2px);"></ellipse>
+<ellipse cx="178" cy="355" fill="#D3D9D5" rx="20" ry="6.5" stroke="#B8C0BC" stroke-width="0.8"></ellipse>
+<ellipse cx="178" cy="354" fill="#E8ECE9" rx="16" ry="4.5"></ellipse>
+<!-- Small brass decorative talisman in tray -->
+<circle cx="175" cy="354" fill="#CBB284" r="2.5"></circle>
+</g>
+<!-- 3. REALISTIC DESIGNER TABLE LAMP (Sculpted fluted base + satin brass collar + conical linen shade) -->
+<!-- Contact shadow under lamp base on table top -->
+<ellipse cx="282" cy="355" fill="#293238" id="lamp-table-shadow" opacity="0.28" rx="36" ry="7" style="filter: blur(3px);"></ellipse>
+<!-- Directional grazing shadow on table (stretches right when lamp is ON) -->
+<polygon fill="#293238" id="lamp-directional-shadow" opacity="0" points="280,355 380,368 470,368 316,355" style="filter: blur(4px); transition: opacity 0.6s;"></polygon>
+<!-- FLUTED TRAVERTINE / CERAMIC CYLINDER BASE -->
+<g id="lamp-base-group">
+<!-- Base foot pad -->
+<rect fill="#78817E" height="3" rx="1.5" width="62" x="251" y="351"></rect>
+<!-- Main sculpted fluted body -->
+<rect class="transition-all duration-700" fill="url(#travertineBaseOff)" height="145" id="lamp-base-body" rx="4" stroke="#A9B1AE" stroke-width="1" width="60" x="252" y="206"></rect>
+<!-- Vertical architectural flute ridges -->
+<line class="transition-colors duration-700" id="base-flute-1" stroke="#DEE3E0" stroke-width="1.2" x1="262" x2="262" y1="210" y2="348"></line>
+<line class="transition-colors duration-700" id="base-flute-2" stroke="#8E9794" stroke-width="1.2" x1="272" x2="272" y1="210" y2="348"></line>
+<line class="transition-colors duration-700" id="base-flute-3" stroke="#DEE3E0" stroke-width="1.2" x1="282" x2="282" y1="210" y2="348"></line>
+<line class="transition-colors duration-700" id="base-flute-4" stroke="#8E9794" stroke-width="1.2" x1="292" x2="292" y1="210" y2="348"></line>
+<line class="transition-colors duration-700" id="base-flute-5" stroke="#DEE3E0" stroke-width="1.2" x1="302" x2="302" y1="210" y2="348"></line>
+<!-- Satin brass / matte titanium transition collar -->
+<rect class="transition-colors duration-500" fill="#9C8B6E" height="12" id="lamp-neck-collar" rx="1" width="22" x="271" y="196"></rect>
+<rect fill="#293238" height="2" opacity="0.25" width="22" x="271" y="206"></rect>
+</g>
+<!-- CONICAL LINEN LAMPSHADE -->
+<g class="transition-all duration-700" id="lamp-shade-group">
+<!-- Upward beam triangle (active when ON) -->
+<polygon class="transition-opacity duration-700 pointer-events-none" fill="#FFECC9" id="shade-beam-up" opacity="0" points="248,82 170,0 394,0 316,82" style="filter: blur(20px);"></polygon>
+<!-- Downward beam trapezoid (active when ON) -->
+<polygon class="transition-opacity duration-700 pointer-events-none" fill="#FFDA9E" id="shade-beam-down" opacity="0" points="208,198 90,366 474,366 356,198" style="filter: blur(30px);"></polygon>
+<!-- Shade diffuse body -->
+<polygon class="transition-all duration-700" fill="url(#shadeNaturalOff)" id="lamp-shade-surface" points="248,82 316,82 358,198 206,198" stroke="#BEC6C1" stroke-width="1"></polygon>
+<!-- Subtle shade texture grain lines -->
+<line opacity="0.25" stroke="#88928E" stroke-dasharray="2 3" stroke-width="0.75" x1="254" x2="216" y1="88" y2="192"></line>
+<line opacity="0.25" stroke="#88928E" stroke-dasharray="2 3" stroke-width="0.75" x1="310" x2="348" y1="88" y2="192"></line>
+<!-- Top shade ring & recessed socket finial -->
+<ellipse cx="282" cy="82" fill="#D3D9D5" id="shade-top-rim" rx="34" ry="6" stroke="#ADB5B0" stroke-width="1"></ellipse>
+<circle cx="282" cy="79" fill="#293238" r="3"></circle>
+<!-- Bottom shade rim with folded fabric hem ring -->
+<ellipse cx="282" cy="198" fill="#C8CFCB" id="shade-bottom-rim" rx="76" ry="11" stroke="#A9B1AC" stroke-width="1.2"></ellipse>
+</g>
+<!-- 4. PHYSICAL TANGIBLE PULL CORD (Interactive Drag & Elastic Pull) -->
+<!-- Cord hangs naturally from right inner socket underside toward front of table -->
+<g class="cursor-grab active:cursor-grabbing group select-none" id="tactile-cord-root" style="touch-action: none;">
+<!-- Brass anchor eyelet inside shade -->
+<circle cx="316" cy="199" fill="#5A4E38" id="cord-eyelet" r="3"></circle>
+<!-- Dynamic interactive cord path (stretched via JS on pointerdrag) -->
+<path d="M 316 200 Q 317 250 316 300" fill="none" id="cord-line-path" stroke="#293238" stroke-dasharray="1.5 2" stroke-linecap="round" stroke-width="1.6"></path>
+<!-- Tactile turned bead toggle / brass finial at cord bottom -->
+<g id="cord-toggle-group" transform="translate(316, 300)">
+<!-- Drop shadow under toggle -->
+<ellipse cx="0" cy="12" fill="#293238" opacity="0.25" rx="5" ry="2" style="filter: blur(1.5px);"></ellipse>
+<!-- Turned satin brass bead -->
+<circle class="group-hover:fill-electric-blue transition-colors duration-150" cx="0" cy="5" fill="#293238" id="cord-bead-main" r="6.5"></circle>
+<circle cx="-1.5" cy="3.5" fill="#E4E7E5" opacity="0.6" r="1.8"></circle>
+<!-- Fine bottom accent ring -->
+<rect fill="#B0A080" height="2" rx="0.8" width="6" x="-3" y="11"></rect>
+<!-- Interactive touch hotspot (wide hit area) -->
+<circle cx="0" cy="6" fill="transparent" r="24"></circle>
 </g>
 </g>
 </svg>
 </div>
-<!-- Microcopy / Eyebrow Directly Beneath Lamp Pull -->
-<div class="relative z-20 flex flex-col items-center justify-center pb-6 mt-[-10px] text-center">
-<button class="group inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-surface-charcoal/80 hover:bg-surface-container border border-border-hairline hover:border-primary/50 transition-all duration-300" onclick="triggerPullCordAction()">
-<span class="w-1.5 h-1.5 rounded-full bg-filament-glow animate-ping"></span>
-<span class="font-label-eyebrow text-label-eyebrow tracking-[0.25em] text-on-surface-variant group-hover:text-primary uppercase transition-colors">GO ON, PULL IT.</span>
-<span class="material-symbols-outlined text-[14px] text-primary transition-transform group-hover:translate-y-0.5">south</span>
-</button>
-<span class="font-caption-specs text-[11px] tracking-wider text-outline mt-2">Click cord, bead, or toggle switch above</span>
-</div>
-<!-- Live Telemetry / Lighting Physics HUD Strip -->
-<div class="relative z-20 w-full grid grid-cols-2 sm:grid-cols-4 gap-4 py-4 px-6 md:px-8 bg-surface-container-lowest/80 border-t border-border-hairline backdrop-blur-md">
-<div>
-<span class="font-caption-specs text-caption-specs uppercase tracking-widest text-outline block mb-1">State</span>
+<!-- Minimalist editorial status footnote in monograph style (No gauges, no telemetry chips) -->
+<div class="w-full max-w-xl flex items-center justify-between border-t border-cool-stone/60 pt-3 mt-1 px-2 text-deep-slate/70">
+<span class="font-mono text-[10px] uppercase tracking-widest text-blue-gray">Atelier Cylindre · Monograph Series N° 04</span>
 <div class="flex items-center gap-2">
-<span class="w-2 h-2 rounded-full bg-outline-variant" id="hud-status-dot"></span>
-<span class="font-label-ui text-label-ui text-on-surface font-semibold uppercase" id="hud-lamp-state">OFF · Standby</span>
+<span class="w-1.5 h-1.5 rounded-full bg-cool-stone transition-colors duration-500" id="scene-state-indicator"></span>
+<span class="font-mono text-[11px] uppercase tracking-wider text-deep-slate font-medium" id="scene-state-text">Standby · Natural Daylight</span>
 </div>
-</div>
-<div>
-<span class="font-caption-specs text-caption-specs uppercase tracking-widest text-outline block mb-1">Color Temperature</span>
-<span class="font-label-ui text-label-ui text-on-surface-variant font-medium" id="hud-kelvin">0 K · Ambient Dark</span>
-</div>
-<div>
-<span class="font-caption-specs text-caption-specs uppercase tracking-widest text-outline block mb-1">Illuminance (Lux)</span>
-<span class="font-label-ui text-label-ui text-on-surface-variant font-medium" id="hud-lux">12 lx · Residual</span>
-</div>
-<div>
-<span class="font-caption-specs text-caption-specs uppercase tracking-widest text-outline block mb-1">Filament Rendering</span>
-<span class="font-label-ui text-label-ui text-on-surface-variant font-medium" id="hud-cri">CRI 98.6 High Fidelity</span>
 </div>
 </div>
 </div>
@@ -274,415 +418,387 @@
 </div>
 </section>
 <!-- 3. "SHOP BY ROOM" PHOTO TILE GRID -->
-<section class="w-full py-space-xl px-margin md:px-margin-tablet lg:px-margin-desktop bg-background" id="shop-by-room">
+<section class="w-full py-space-xl px-margin md:px-margin-tablet lg:px-margin-desktop bg-porcelain border-b border-cool-stone/60" id="shop-by-room">
 <div class="max-w-7xl mx-auto">
 <!-- Section Header -->
-<div class="max-w-3xl mb-14">
+<div class="max-w-3xl mb-12">
 <div class="flex items-center gap-2 mb-3">
-<span class="w-1.5 h-1.5 rounded-full bg-filament-glow"></span>
-<span class="font-label-eyebrow text-label-eyebrow uppercase tracking-widest text-primary">CURATED SPACES</span>
+<span class="w-2 h-2 rounded-full bg-electric-blue"></span>
+<span class="font-mono text-[11px] uppercase tracking-[0.2em] text-deep-slate font-semibold">CURATED ENVIRONMENTS</span>
 </div>
-<h2 class="font-headline-lg text-headline-md md:text-headline-lg text-on-surface tracking-tight mb-4">Shop by Room</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant font-light">
-          Every space demands its own optical cadence — from intimate task focus to theatrical expanse.
-        </p>
+<h2 class="font-display text-3xl md:text-4xl text-deep-slate tracking-tight font-medium mb-3">Shop by Room</h2>
+<p class="font-body text-base text-blue-gray">
+              Every architectural volume demands its own optical cadence — tailored for material texture, ceiling height, and daylight exposure.
+            </p>
 </div>
-<!-- Asymmetrical 6-Tile Bento Grid -->
+<!-- Asymmetric 6-Tile Grid -->
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
-<!-- Tile 1: Living Room (Large 7-col) -->
-<a class="group relative lg:col-span-7 min-h-[380px] lg:min-h-[440px] overflow-hidden bg-surface-container flex flex-col justify-end p-8 md:p-10 transition-all duration-500 hover:shadow-2xl" href="#collections">
-<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" data-alt="High-end modern living room with soaring concrete ceilings, dramatic linear cove illumination casting warm golden light, and sculptural brass chandelier centerpiece, deep charcoal moody atmosphere with minimal warm furnishings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBenZCobDCyDinwVyHrO5yCPxivP6O1WLGwQ4S1CtmztcH_l4xdEwL3yiZTXaD3VmVqxqhros5ZXlrjhoRAEY6ND-eIy61-JjVRPZmvsIYXNyIjucpqyakvBujN84SopcWecQdBwBuwbuM46xjMmjlhCLTDtZ7i4q-IdNMX7dee27T-CWaRHX1DaiYSYdpQxUxIxr1AKRr2xo_b90silnD6VWbFniBLQHVlvdcR42_zy9XmvfyTAHRX"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
-<div class="relative z-10">
-<div class="flex items-center justify-between gap-4 mb-2">
-<span class="font-caption-specs text-caption-specs uppercase tracking-widest text-primary">34 Fixtures Available</span>
-<span class="font-label-ui text-label-ui uppercase tracking-wider text-primary opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1">
-                Explore Room <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+<!-- Living Room -->
+<a class="group relative lg:col-span-7 min-h-[380px] bg-mist-gray border border-cool-stone p-8 flex flex-col justify-end overflow-hidden hover:border-deep-slate transition-colors duration-300" href="#collections">
+<img alt="Modern concrete living room architectural cove illumination" class="absolute inset-0 w-full h-full object-cover grayscale-[20%] group-hover:scale-105 group-hover:grayscale-0 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBenZCobDCyDinwVyHrO5yCPxivP6O1WLGwQ4S1CtmztcH_l4xdEwL3yiZTXaD3VmVqxqhros5ZXlrjhoRAEY6ND-eIy61-JjVRPZmvsIYXNyIjucpqyakvBujN84SopcWecQdBwBuwbuM46xjMmjlhCLTDtZ7i4q-IdNMX7dee27T-CWaRHX1DaiYSYdpQxUxIxr1AKRr2xo_b90silnD6VWbFniBLQHVlvdcR42_zy9XmvfyTAHRX"/>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-slate/85 via-deep-slate/40 to-transparent"></div>
+<div class="relative z-10 text-porcelain">
+<div class="flex items-center justify-between mb-2">
+<span class="font-mono text-[11px] uppercase tracking-widest text-cool-stone">34 Fixtures Available</span>
+<span class="font-mono text-[11px] uppercase tracking-wider text-porcelain flex items-center gap-1 group-hover:text-electric-blue transition-colors">
+                    View Space <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
 </span>
 </div>
-<h3 class="font-headline-md text-headline-sm md:text-headline-md text-on-surface mb-2">Living Room</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant max-w-lg">Ambient chandeliers, perimeter architectural coves &amp; indirect mood wall grazers.</p>
+<h3 class="font-display text-2xl font-medium mb-1">Living Room</h3>
+<p class="font-body text-[13px] text-cool-stone max-w-md">Ambient chandeliers, perimeter architectural coves &amp; indirect mood wall grazers.</p>
 </div>
 </a>
-<!-- Tile 2: Bedroom (5-col) -->
-<a class="group relative lg:col-span-5 min-h-[380px] lg:min-h-[440px] overflow-hidden bg-surface-container flex flex-col justify-end p-8 md:p-10 transition-all duration-500 hover:shadow-2xl" href="#collections">
-<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" data-alt="Moody luxury master bedroom suite with dark plaster walls, minimal floating warm 2200K brass reading sconces and warm ambient bedside glow, quiet luxury Indian penthouse interior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB46mLm3R7wbLxGf6L_8Cov2NLyB36z4MmDjILanbl2WASLj0aRT-GpbCRDr9A41eXvfJnffY7KRQxwnflBI3QYs57RJPFc0tW6Hi41RfFsqyy8Z56ogwgEHhgbGAPG_j1h5KapN6Qya_4i6hct4eUNCoyxsV01DP3YjFzm38Eev7dfiX4gseyJl3UieVpmItEr-6XgGqu-WYNMdA8YS0S3IFdRk1z_U-Qps6UlqwhoAfFRhoh0fKkF"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
-<div class="relative z-10">
-<div class="flex items-center justify-between gap-4 mb-2">
-<span class="font-caption-specs text-caption-specs uppercase tracking-widest text-primary">18 Fixtures</span>
-<span class="font-label-ui text-label-ui uppercase tracking-wider text-primary opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1">
-                Explore <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+<!-- Bedroom -->
+<a class="group relative lg:col-span-5 min-h-[380px] bg-mist-gray border border-cool-stone p-8 flex flex-col justify-end overflow-hidden hover:border-deep-slate transition-colors duration-300" href="#collections">
+<img alt="Moody luxury master bedroom with brass reading sconces" class="absolute inset-0 w-full h-full object-cover grayscale-[20%] group-hover:scale-105 group-hover:grayscale-0 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB46mLm3R7wbLxGf6L_8Cov2NLyB36z4MmDjILanbl2WASLj0aRT-GpbCRDr9A41eXvfJnffY7KRQxwnflBI3QYs57RJPFc0tW6Hi41RfFsqyy8Z56ogwgEHhgbGAPG_j1h5KapN6Qya_4i6hct4eUNCoyxsV01DP3YjFzm38Eev7dfiX4gseyJl3UieVpmItEr-6XgGqu-WYNMdA8YS0S3IFdRk1z_U-Qps6UlqwhoAfFRhoh0fKkF"/>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-slate/85 via-deep-slate/40 to-transparent"></div>
+<div class="relative z-10 text-porcelain">
+<div class="flex items-center justify-between mb-2">
+<span class="font-mono text-[11px] uppercase tracking-widest text-cool-stone">18 Fixtures</span>
+<span class="font-mono text-[11px] uppercase tracking-wider text-porcelain flex items-center gap-1 group-hover:text-electric-blue transition-colors">
+                    View <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
 </span>
 </div>
-<h3 class="font-headline-md text-headline-sm md:text-headline-md text-on-surface mb-2">Bedroom</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Intimate warm 2200K reading sconces &amp; floating diffused pendants.</p>
+<h3 class="font-display text-2xl font-medium mb-1">Bedroom</h3>
+<p class="font-body text-[13px] text-cool-stone">Intimate warm 2200K reading sconces &amp; floating diffused pendants.</p>
 </div>
 </a>
-<!-- Tile 3: Kitchen & Dining (5-col) -->
-<a class="group relative lg:col-span-5 min-h-[380px] lg:min-h-[420px] overflow-hidden bg-surface-container flex flex-col justify-end p-8 md:p-10 transition-all duration-500 hover:shadow-2xl" href="#collections">
-<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" data-alt="Opulent marble dining room island illuminated by low-hanging geometric bronze linear pendant light and precision glare-free architectural downlights, moody chiaroscuro editorial styling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxSZhAarDnoWgSxgIG_JO_j8id3mxHGqrLDBb2ODCXk54cnXKz1SUxMyfh8QRxCNngDdbAKxgVRtX_YAt0ho6wfRB6Xg-lNtZClbsxjvB9CfO6MRTrJ6cC_HC-LOmLzwbw1dTxNhgWwoCxnGijZP7ujAVaBE2iDIERTOW3mTjarfWGi1PJkflbvoYzrMptRoad-O4WiOgJoBib29lqfJjk1WCrbBlldr8CdMLmVSZwafWgLDaNHJkf"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
-<div class="relative z-10">
-<div class="flex items-center justify-between gap-4 mb-2">
-<span class="font-caption-specs text-caption-specs uppercase tracking-widest text-primary">28 Fixtures</span>
-<span class="font-label-ui text-label-ui uppercase tracking-wider text-primary opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1">
-                Explore <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</span>
-</div>
-<h3 class="font-headline-md text-headline-sm md:text-headline-md text-on-surface mb-2">Kitchen &amp; Dining</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Precision downlights &amp; sculptural dining table centerpieces.</p>
+<!-- Kitchen & Dining -->
+<a class="group relative lg:col-span-5 min-h-[360px] bg-mist-gray border border-cool-stone p-8 flex flex-col justify-end overflow-hidden hover:border-deep-slate transition-colors duration-300" href="#collections">
+<img alt="Marble dining island with architectural linear pendant" class="absolute inset-0 w-full h-full object-cover grayscale-[20%] group-hover:scale-105 group-hover:grayscale-0 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxSZhAarDnoWgSxgIG_JO_j8id3mxHGqrLDBb2ODCXk54cnXKz1SUxMyfh8QRxCNngDdbAKxgVRtX_YAt0ho6wfRB6Xg-lNtZClbsxjvB9CfO6MRTrJ6cC_HC-LOmLzwbw1dTxNhgWwoCxnGijZP7ujAVaBE2iDIERTOW3mTjarfWGi1PJkflbvoYzrMptRoad-O4WiOgJoBib29lqfJjk1WCrbBlldr8CdMLmVSZwafWgLDaNHJkf"/>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-slate/85 via-deep-slate/40 to-transparent"></div>
+<div class="relative z-10 text-porcelain">
+<span class="font-mono text-[11px] uppercase tracking-widest text-cool-stone block mb-2">28 Fixtures</span>
+<h3 class="font-display text-2xl font-medium mb-1">Kitchen &amp; Dining</h3>
+<p class="font-body text-[13px] text-cool-stone">Precision downlights &amp; sculptural island centerpieces.</p>
 </div>
 </a>
-<!-- Tile 4: Workspace (7-col) -->
-<a class="group relative lg:col-span-7 min-h-[380px] lg:min-h-[420px] overflow-hidden bg-surface-container flex flex-col justify-end p-8 md:p-10 transition-all duration-500 hover:shadow-2xl" href="#collections">
-<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" data-alt="Sophisticated executive office interior with dark oak wood and leather, minimal micro-prismatic anti-glare linear architectural luminaire suspended over dark conference desk, subtle task lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxwC7iFkFAfEDxAs8ENkcUHZdmbhrjoxqR1VheTdEddqThe7xY0lpbw-SB_VqNf1mWRHXVdQ-QQMfOqKxr56zZYogI_uAtfQ3QRo-8tmk0j7T3_KgzvULz5t9tdrh37KvFYAukAopws_Xjt_OFRztJJj2hJLGMC8R8CV3kKhw2IAsiEbRTpQ7SsKGfdFWil-ybpd0p619w5jBboeUzXU2LsJARlM0EWD-8mcx9P2uANEBZH7tRUD64"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
-<div class="relative z-10">
-<div class="flex items-center justify-between gap-4 mb-2">
-<span class="font-caption-specs text-caption-specs uppercase tracking-widest text-primary">21 Fixtures</span>
-<span class="font-label-ui text-label-ui uppercase tracking-wider text-primary opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1">
-                Explore Room <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</span>
-</div>
-<h3 class="font-headline-md text-headline-sm md:text-headline-md text-on-surface mb-2">Workspace</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant max-w-lg">Anti-glare micro-prismatic linear profiles &amp; focused task luminaires.</p>
+<!-- Workspace -->
+<a class="group relative lg:col-span-7 min-h-[360px] bg-mist-gray border border-cool-stone p-8 flex flex-col justify-end overflow-hidden hover:border-deep-slate transition-colors duration-300" href="#collections">
+<img alt="Executive office with minimal micro-prismatic linear luminaire" class="absolute inset-0 w-full h-full object-cover grayscale-[20%] group-hover:scale-105 group-hover:grayscale-0 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxwC7iFkFAfEDxAs8ENkcUHZdmbhrjoxqR1VheTdEddqThe7xY0lpbw-SB_VqNf1mWRHXVdQ-QQMfOqKxr56zZYogI_uAtfQ3QRo-8tmk0j7T3_KgzvULz5t9tdrh37KvFYAukAopws_Xjt_OFRztJJj2hJLGMC8R8CV3kKhw2IAsiEbRTpQ7SsKGfdFWil-ybpd0p619w5jBboeUzXU2LsJARlM0EWD-8mcx9P2uANEBZH7tRUD64"/>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-slate/85 via-deep-slate/40 to-transparent"></div>
+<div class="relative z-10 text-porcelain">
+<span class="font-mono text-[11px] uppercase tracking-widest text-cool-stone block mb-2">21 Fixtures</span>
+<h3 class="font-display text-2xl font-medium mb-1">Workspace</h3>
+<p class="font-body text-[13px] text-cool-stone max-w-md">Anti-glare micro-prismatic linear profiles &amp; focused task luminaires.</p>
 </div>
 </a>
-<!-- Tile 5: Showroom & Commercial (6-col) -->
-<a class="group relative lg:col-span-6 min-h-[360px] overflow-hidden bg-surface-container flex flex-col justify-end p-8 md:p-10 transition-all duration-500 hover:shadow-2xl" href="#collections">
-<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" data-alt="Museum quality luxury gallery and retail boutique illuminated by high-CRI dark architectural magnetic track lighting and precision art spotlights on black textured walls" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdJZmiktrwTjhbHV58Fc2qLU4q3oUaWvjsFAZcLOXjwWjfDj712OwXmwdPg3Ihri64Z7lrkdiXay9ueV32Up2OBRp2jdwENu6otvXORngHc1LkREzrTji2YtYPcCq6elFpdA6wKYENwcznaQkSFlJ7bxqEXO3JtPjcHp70ydFNMmv2EBf34H8oeWs4YAE4-9LY85-YTZYO8OfyuFGIWE6bJNtknEWiVBu7daA3smpbAsyYEXeSMwM2"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
-<div class="relative z-10">
-<span class="font-caption-specs text-caption-specs uppercase tracking-widest text-primary block mb-2">42 Fixtures</span>
-<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Showroom &amp; Commercial</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant">High-CRI magnetic track systems &amp; architectural accent spotlights.</p>
+<!-- Commercial & Gallery -->
+<a class="group relative lg:col-span-6 min-h-[340px] bg-mist-gray border border-cool-stone p-8 flex flex-col justify-end overflow-hidden hover:border-deep-slate transition-colors duration-300" href="#collections">
+<img alt="Gallery showroom with magnetic track lighting and spotlights" class="absolute inset-0 w-full h-full object-cover grayscale-[20%] group-hover:scale-105 group-hover:grayscale-0 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdJZmiktrwTjhbHV58Fc2qLU4q3oUaWvjsFAZcLOXjwWjfDj712OwXmwdPg3Ihri64Z7lrkdiXay9ueV32Up2OBRp2jdwENu6otvXORngHc1LkREzrTji2YtYPcCq6elFpdA6wKYENwcznaQkSFlJ7bxqEXO3JtPjcHp70ydFNMmv2EBf34H8oeWs4YAE4-9LY85-YTZYO8OfyuFGIWE6bJNtknEWiVBu7daA3smpbAsyYEXeSMwM2"/>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-slate/85 via-deep-slate/40 to-transparent"></div>
+<div class="relative z-10 text-porcelain">
+<span class="font-mono text-[11px] uppercase tracking-widest text-cool-stone block mb-2">42 Fixtures</span>
+<h3 class="font-display text-2xl font-medium mb-1">Commercial &amp; Gallery</h3>
+<p class="font-body text-[13px] text-cool-stone">High-CRI magnetic track systems &amp; architectural accent spotlights.</p>
 </div>
 </a>
-<!-- Tile 6: Outdoor & Landscape (6-col) -->
-<a class="group relative lg:col-span-6 min-h-[360px] overflow-hidden bg-surface-container flex flex-col justify-end p-8 md:p-10 transition-all duration-500 hover:shadow-2xl" href="#collections">
-<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" data-alt="Luxury tropical courtyard villa exterior at dusk with warm bronze IP65 pathway bollards and dramatic facade grazers illuminating rough stone textures in Gujarat residence" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjYbK0ztLZ74p_oYwB9e6w2iaWf8AMKnm0RoeKK9NBN-rQMHKnxxdEd4JSCf9kzOgslTxwF0btVGzQCAtxSIFXmHH4bI3mZ4MlflfeT4q6tAwv-vgxQ9LDs3NbPu_K6MIdeprlKwu8Jckf4tT-T5S9Rp4VbNwxKA4J-O-Nqesyp63wIJW4DKcZ-I1ejMhXfB-o9Nz6rZTeBatzNpHmuIBv4irBdn9XuxDUVgFFrDZvWl-qgY7XIe0D"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
-<div class="relative z-10">
-<span class="font-caption-specs text-caption-specs uppercase tracking-widest text-primary block mb-2">19 Fixtures</span>
-<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Outdoor &amp; Landscape</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Weatherproof bronze path luminaires &amp; architectural facade grazers.</p>
+<!-- Outdoor & Facade -->
+<a class="group relative lg:col-span-6 min-h-[340px] bg-mist-gray border border-cool-stone p-8 flex flex-col justify-end overflow-hidden hover:border-deep-slate transition-colors duration-300" href="#collections">
+<img alt="Outdoor courtyard with IP65 pathway bollards" class="absolute inset-0 w-full h-full object-cover grayscale-[20%] group-hover:scale-105 group-hover:grayscale-0 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjYbK0ztLZ74p_oYwB9e6w2iaWf8AMKnm0RoeKK9NBN-rQMHKnxxdEd4JSCf9kzOgslTxwF0btVGzQCAtxSIFXmHH4bI3mZ4MlflfeT4q6tAwv-vgxQ9LDs3NbPu_K6MIdeprlKwu8Jckf4tT-T5S9Rp4VbNwxKA4J-O-Nqesyp63wIJW4DKcZ-I1ejMhXfB-o9Nz6rZTeBatzNpHmuIBv4irBdn9XuxDUVgFFrDZvWl-qgY7XIe0D"/>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-slate/85 via-deep-slate/40 to-transparent"></div>
+<div class="relative z-10 text-porcelain">
+<span class="font-mono text-[11px] uppercase tracking-widest text-cool-stone block mb-2">19 Fixtures</span>
+<h3 class="font-display text-2xl font-medium mb-1">Outdoor &amp; Facade</h3>
+<p class="font-body text-[13px] text-cool-stone">Weatherproof bronze path luminaires &amp; architectural facade grazers.</p>
 </div>
 </a>
 </div>
 </div>
 </section>
-<!-- 4. "COLLECTIONS" PRODUCT CATEGORY DIRECTORY -->
-<section class="w-full py-space-xl px-margin md:px-margin-tablet lg:px-margin-desktop bg-surface-container-lowest" id="collections">
+<!-- 4. "OUR COLLECTIONS" PRODUCT CATEGORY DIRECTORY -->
+<section class="w-full py-space-xl px-margin md:px-margin-tablet lg:px-margin-desktop bg-porcelain border-b border-cool-stone/60" id="collections">
 <div class="max-w-7xl mx-auto">
-<!-- Section Header & Filter Tabs -->
+<!-- Header and Filter Pills -->
 <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12">
 <div>
 <div class="flex items-center gap-2 mb-3">
-<span class="w-1.5 h-1.5 rounded-full bg-filament-glow"></span>
-<span class="font-label-eyebrow text-label-eyebrow uppercase tracking-widest text-primary">CATALOGUE 2025</span>
+<span class="w-2 h-2 rounded-full bg-electric-blue"></span>
+<span class="font-mono text-[11px] uppercase tracking-[0.2em] text-deep-slate font-semibold">CATALOGUE · 2025 EDITION</span>
 </div>
-<h2 class="font-headline-lg text-headline-md md:text-headline-lg text-on-surface tracking-tight">Our Collections</h2>
+<h2 class="font-display text-3xl md:text-4xl text-deep-slate tracking-tight font-medium">Our Collections</h2>
 </div>
-<!-- Filter Tabs -->
-<div class="flex flex-wrap items-center gap-2 bg-surface-charcoal p-1.5">
-<button class="collection-filter-btn px-5 py-2 font-label-ui text-label-ui uppercase tracking-wider bg-primary-container text-on-primary-container font-medium" data-filter="all">All</button>
-<button class="collection-filter-btn px-5 py-2 font-label-ui text-label-ui uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-filter="architectural">Architectural</button>
-<button class="collection-filter-btn px-5 py-2 font-label-ui text-label-ui uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-filter="decorative">Decorative</button>
-<button class="collection-filter-btn px-5 py-2 font-label-ui text-label-ui uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-filter="technical">Technical</button>
+<!-- Filter Pills in JetBrains Mono -->
+<div class="flex flex-wrap items-center gap-2 border border-cool-stone p-1 bg-mist-gray">
+<button class="collection-filter-btn px-4 py-1.5 font-mono text-[11px] uppercase tracking-wider bg-deep-slate text-porcelain font-semibold" data-filter="all">All (8)</button>
+<button class="collection-filter-btn px-4 py-1.5 font-mono text-[11px] uppercase tracking-wider text-blue-gray hover:text-deep-slate transition-colors" data-filter="architectural">Architectural</button>
+<button class="collection-filter-btn px-4 py-1.5 font-mono text-[11px] uppercase tracking-wider text-blue-gray hover:text-deep-slate transition-colors" data-filter="decorative">Decorative</button>
+<button class="collection-filter-btn px-4 py-1.5 font-mono text-[11px] uppercase tracking-wider text-blue-gray hover:text-deep-slate transition-colors" data-filter="technical">Technical</button>
 </div>
 </div>
-<!-- Category Product Cards Grid -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-<!-- Card 1: Chandeliers -->
-<div class="group bg-surface-charcoal p-6 flex flex-col justify-between transition-all duration-300 hover:bg-surface-container-high hover:shadow-xl">
+<!-- Product Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- 1. Chandeliers -->
+<div class="group bg-mist-gray border border-cool-stone p-5 flex flex-col justify-between hover:border-deep-slate transition-colors duration-200">
 <div>
-<div class="relative w-full h-64 bg-surface-container overflow-hidden mb-6 flex items-center justify-center">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Sculptural modern chandelier in patinated brass with frosted hand-blown spherical glass globes glowing warm amber on pure dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX7OdJUYqvxVQsidRkfjGd1uCW1WeNHDngHlTyqISM9txPJOdNKTli-SZLVMOoDE-uR-nGvV19klnZaRQYabfwVetX8Ru7hHjXHPb2cGGKQ9oOljUOP1Bnw-y85tnHIUl9NELRo3__5Ig_CCWIpP5QjwrFjLAo4inrV5FFw2FS2vXoLPF6P3sn_RDQvO7XpEwQ-x_bvPPb4R6rL_9HFi5MG5Wj3qxLivGeGF59ydCqoEJ7L8pHm_Nc"/>
-<span class="absolute top-3 left-3 px-2 py-1 bg-surface-container-lowest/80 backdrop-blur-sm font-caption-specs text-caption-specs text-primary uppercase">Decorative</span>
+<div class="relative w-full h-56 bg-porcelain overflow-hidden mb-5 border border-cool-stone/60 flex items-center justify-center">
+<img alt="Sculptural chandelier in patinated brass" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX7OdJUYqvxVQsidRkfjGd1uCW1WeNHDngHlTyqISM9txPJOdNKTli-SZLVMOoDE-uR-nGvV19klnZaRQYabfwVetX8Ru7hHjXHPb2cGGKQ9oOljUOP1Bnw-y85tnHIUl9NELRo3__5Ig_CCWIpP5QjwrFjLAo4inrV5FFw2FS2vXoLPF6P3sn_RDQvO7XpEwQ-x_bvPPb4R6rL_9HFi5MG5Wj3qxLivGeGF59ydCqoEJ7L8pHm_Nc"/>
+<span class="absolute top-2.5 left-2.5 px-2 py-0.5 bg-porcelain border border-cool-stone font-mono text-[10px] text-deep-slate uppercase font-medium">Decorative</span>
 </div>
-<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors mb-2">Chandeliers</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">Sculptural statement centerpieces in blackened brass &amp; hand-blown artisan glass.</p>
+<h3 class="font-display text-lg font-semibold text-deep-slate mb-1">Chandeliers</h3>
+<p class="font-body text-[13px] text-blue-gray mb-4">Sculptural centerpieces in patinated metals &amp; mouth-blown art glass.</p>
 </div>
-<div class="pt-4 flex flex-wrap gap-1.5">
-<span class="px-2 py-1 bg-surface-container font-caption-specs text-caption-specs text-on-surface-variant">CRI 98+</span>
-<span class="px-2 py-1 bg-surface-container font-caption-specs text-caption-specs text-on-surface-variant">2700K - 1800K</span>
-<span class="px-2 py-1 bg-surface-container font-caption-specs text-caption-specs text-on-surface-variant">DALI-2</span>
+<div class="pt-3 border-t border-cool-stone/70">
+<span class="font-mono text-[11px] text-deep-slate font-medium">CRI 98+ · 2700K–1800K · DALI-2</span>
 </div>
 </div>
-<!-- Card 2: Pendant & Hanging Lights -->
-<div class="group bg-surface-charcoal p-6 flex flex-col justify-between transition-all duration-300 hover:bg-surface-container-high hover:shadow-xl">
+<!-- 2. Pendant & Hanging -->
+<div class="group bg-mist-gray border border-cool-stone p-5 flex flex-col justify-between hover:border-deep-slate transition-colors duration-200">
 <div>
-<div class="relative w-full h-64 bg-surface-container overflow-hidden mb-6 flex items-center justify-center">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Minimalist suspended brass and smoked glass cylinder pendant light isolated in dark architectural shadow casting warm downlight beam" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAreHc4-ap3so3VKPt3UjrJVBcSJ9wQj23Ob3Q9Crbt47B6yKZDRqK_b-Od1G6B2fwFCFbY6MNyrHQqOm3ac3Tnb4xUjQ3kszKxNB1m8XYAR1zvGyNCXXwEuL1zHeT9N8chuwnhwvT_0kb_ui8b8sJ1qJUBD2e4CzEeEJlSQQDSOxh-_sc5EO6CrsKjG6NyIvSKGhJQNdiHEov6DN4AJPc33zzcZ2xV90hPgrvyM3yhFa1OY-hNjL9T"/>
-<span class="absolute top-3 left-3 px-2 py-1 bg-surface-container-lowest/80 backdrop-blur-sm font-caption-specs text-caption-specs text-primary uppercase">Decorative</span>
+<div class="relative w-full h-56 bg-porcelain overflow-hidden mb-5 border border-cool-stone/60 flex items-center justify-center">
+<img alt="Minimalist suspended cylinder pendant" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAreHc4-ap3so3VKPt3UjrJVBcSJ9wQj23Ob3Q9Crbt47B6yKZDRqK_b-Od1G6B2fwFCFbY6MNyrHQqOm3ac3Tnb4xUjQ3kszKxNB1m8XYAR1zvGyNCXXwEuL1zHeT9N8chuwnhwvT_0kb_ui8b8sJ1qJUBD2e4CzEeEJlSQQDSOxh-_sc5EO6CrsKjG6NyIvSKGhJQNdiHEov6DN4AJPc33zzcZ2xV90hPgrvyM3yhFa1OY-hNjL9T"/>
+<span class="absolute top-2.5 left-2.5 px-2 py-0.5 bg-porcelain border border-cool-stone font-mono text-[10px] text-deep-slate uppercase font-medium">Decorative</span>
 </div>
-<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors mb-2">Pendant &amp; Hanging</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">Minimalist suspended luminaires with warm dimming optical engines.</p>
+<h3 class="font-display text-lg font-semibold text-deep-slate mb-1">Pendant Luminaires</h3>
+<p class="font-body text-[13px] text-blue-gray mb-4">Minimalist suspended elements with precision micro-downlight optics.</p>
 </div>
-<div class="pt-4 flex flex-wrap gap-1.5">
-<span class="px-2 py-1 bg-surface-container font-caption-specs text-caption-specs text-on-surface-variant">Warm Dim</span>
-<span class="px-2 py-1 bg-surface-container font-caption-specs text-caption-specs text-on-surface-variant">Phase-Cut</span>
-<span class="px-2 py-1 bg-surface-container font-caption-specs text-caption-specs text-on-surface-variant">CRI 97</span>
+<div class="pt-3 border-t border-cool-stone/70">
+<span class="font-mono text-[11px] text-deep-slate font-medium">Warm Dim · Phase-Cut · CRI 97</span>
 </div>
 </div>
-<!-- Card 3: Ceiling Lights -->
-<div class="group bg-surface-charcoal p-6 flex flex-col justify-between transition-all duration-300 hover:bg-surface-container-high hover:shadow-xl">
+<!-- 3. Ceiling Lights -->
+<div class="group bg-mist-gray border border-cool-stone p-5 flex flex-col justify-between hover:border-deep-slate transition-colors duration-200">
 <div>
-<div class="relative w-full h-64 bg-surface-container overflow-hidden mb-6 flex items-center justify-center">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Architectural flush mount geometric disc luminaire made of spun bronze and recessed indirect acoustic felt halo on dark surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAz4eTvaxxL9GfhA22tZyHm2Syu2eqELnShXShAHcEr07kCvydqtMpCEJTO69nnlnGsdnMsSip0OWNngWakrQKXTkB2HVKzIcHVUFFK1EPyJYdTGNDrZNXzQV7AfudzOXWYNq_DN07Ga7Y5OI8UwgZpREY1GNkAcvqOVPmE79IgI4AucabwZu-SQhD0mG9pC1rGU25liJAfR9U7aCz6HJwNNj52DNP6ehQwgUw6i8p9CKJBPYoo_EP9"/>
-<span class="absolute top-3 left-3 px-2 py-1 bg-surface-container-lowest/80 backdrop-blur-sm font-caption-specs text-caption-specs text-primary uppercase">Architectural</span>
+<div class="relative w-full h-56 bg-porcelain overflow-hidden mb-5 border border-cool-stone/60 flex items-center justify-center">
+<img alt="Geometric flush mount luminaire" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAz4eTvaxxL9GfhA22tZyHm2Syu2eqELnShXShAHcEr07kCvydqtMpCEJTO69nnlnGsdnMsSip0OWNngWakrQKXTkB2HVKzIcHVUFFK1EPyJYdTGNDrZNXzQV7AfudzOXWYNq_DN07Ga7Y5OI8UwgZpREY1GNkAcvqOVPmE79IgI4AucabwZu-SQhD0mG9pC1rGU25liJAfR9U7aCz6HJwNNj52DNP6ehQwgUw6i8p9CKJBPYoo_EP9"/>
+<span class="absolute top-2.5 left-2.5 px-2 py-0.5 bg-porcelain border border-cool-stone font-mono text-[10px] text-deep-slate uppercase font-medium">Architectural</span>
 </div>
-<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors mb-2">Ceiling Lights</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">Flush &amp; semi-flush geometric discs and understated architectural monoliths.</p>
+<h3 class="font-display text-lg font-semibold text-deep-slate mb-1">Ceiling Discs</h3>
+<p class="font-body text-[13px] text-blue-gray mb-4">Flush acoustic discs and ultra-low profile geometric ceiling monoliths.</p>
 </div>
-<div class="pt-4 flex flex-wrap gap-1.5">
-<span class="px-2 py-1 bg-surface-container font-caption-specs text-caption-specs text-on-surface-variant">Ultra-Thin</span>
-<span class="px-2 py-1 bg-surface-container font-caption-specs text-caption-specs text-on-surface-variant">Tunable White</span>
-<span class="px-2 py-1 bg-surface-container font-caption-specs text-caption-specs text-on-surface-variant">Zigbee</span>
+<div class="pt-3 border-t border-cool-stone/70">
+<span class="font-mono text-[11px] text-deep-slate font-medium">Tunable White · Ultra-Thin · Zigbee</span>
 </div>
 </div>
-<!-- Card 4: Wall Lights & Sconces -->
-<div class="group bg-surface-charcoal p-6 flex flex-col justify-between transition-all duration-300 hover:bg-surface-container-high hover:shadow-xl">
+<!-- 4. Wall Luminaires & Sconces -->
+<div class="group bg-mist-gray border border-cool-stone p-5 flex flex-col justify-between hover:border-deep-slate transition-colors duration-200">
 <div>
-<div class="relative w-full h-64 bg-surface-container overflow-hidden mb-6 flex items-center justify-center">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Sculptural radial wall sconce in blackened steel casting an eclipse halo of warm ambient light against dark lime wash wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpTi7Int1DVTgFEu0W3tm_6qFCcSVVISZREz2AhvjEJ0HAvtadejjwuoyaAU3khTaaMoOp7DwD1GtmTDb5vDQiGPRR1afKpp9S7hNzLtsLetBy_IEKzyHi5WrHadIiPQNGZf4ovDC3vhsIhZ43jFc_9MhWouqj9T1s8SVSmaRqd1-jyD_ApAnMrkgsXrZEmzKCJlBv3Gj_OMKos-BcjEuUTnZlYlhYSm-g_6OfCtSpMc2tL4UKIxnZ"/>
-<span class="absolute top-3 left-3 px-2 py-1 bg-surface-container-lowest/80 backdrop-blur-sm font-caption-specs text-caption-specs text-primary uppercase">Decorative</span>
+<div class="relative w-full h-56 bg-porcelain overflow-hidden mb-5 border border-cool-stone/60 flex items-center justify-center">
+<img alt="Sculptural wall sconce with halo light" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpTi7Int1DVTgFEu0W3tm_6qFCcSVVISZREz2AhvjEJ0HAvtadejjwuoyaAU3khTaaMoOp7DwD1GtmTDb5vDQiGPRR1afKpp9S7hNzLtsLetBy_IEKzyHi5WrHadIiPQNGZf4ovDC3vhsIhZ43jFc_9MhWouqj9T1s8SVSmaRqd1-jyD_ApAnMrkgsXrZEmzKCJlBv3Gj_OMKos-BcjEuUTnZlYlhYSm-g_6OfCtSpMc2tL4UKIxnZ"/>
+<span class="absolute top-2.5 left-2.5 px-2 py-0.5 bg-porcelain border border-cool-stone font-mono text-[10px] text-deep-slate uppercase font-medium">Decorative</span>
 </div>
-<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors mb-2">Wall Sconces</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">Radial indirect wall grazers &amp; directional bedside reading wands.</p>
+<h3 class="font-display text-lg font-semibold text-deep-slate mb-1">Wall Sconces</h3>
+<p class="font-body text-[13px] text-blue-gray mb-4">Radial indirect wall grazers and directional bedside task wands.</p>
 </div>
-<div class="pt-4 flex flex-wrap gap-1.5">
-<span class="px-2 py-1 bg-surface-container font-caption-specs text-caption-specs text-on-surface-variant">2200K Bedside</span>
-<span class="px-2 py-1 bg-surface-container font-caption-specs text-caption-specs text-on-surface-variant">Indirect</span>
-<span class="px-2 py-1 bg-surface-container font-caption-specs text-caption-specs text-on-surface-variant">IP44</span>
+<div class="pt-3 border-t border-cool-stone/70">
+<span class="font-mono text-[11px] text-deep-slate font-medium">2200K Bedside · Indirect · IP44</span>
 </div>
 </div>
-<!-- Card 5: Table & Floor Lamps -->
-<div class="group bg-surface-charcoal p-6 flex flex-col justify-between transition-all duration-300 hover:bg-surface-container-high hover:shadow-xl">
+<!-- 5. Table & Floor -->
+<div class="group bg-mist-gray border border-cool-stone p-5 flex flex-col justify-between hover:border-deep-slate transition-colors duration-200">
 <div>
-<div class="relative w-full h-64 bg-surface-container overflow-hidden mb-6 flex items-center justify-center">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Tactile black marble and patinated brass table lamp with heavy dome shade and hand-blown crystal diffuser, warm incandescent glow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChaefo98GnImj5AJXSW-yjCe9LDSTgKF_iKn7AXtYv4w17wbl0NhzOWRGjZHd9elYOATZAhT5iAl1OW_G2aILtkRXriVBoEK3fEF8g01QdGw-kn6MnIK94rY0gDUiTUjUAvTnqhoYjpaR6AIlZbKT1DWomACWg7FY_5GNXqz-ZTJltk8n2nINb0D709GZ1POwvb-31UcwUygMG1dc14x0exl0dJRkrZpc5DzxAg4KYP83jiED-UgIF"/>
-<span class="absolute top-3 left-3 px-2 py-1 bg-surface-container-lowest/80 backdrop-blur-sm font-caption-specs text-caption-specs text-primary uppercase">Decorative</span>
+<div class="relative w-full h-56 bg-porcelain overflow-hidden mb-5 border border-cool-stone/60 flex items-center justify-center">
+<img alt="Tactile stone and brass atelier table lamp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChaefo98GnImj5AJXSW-yjCe9LDSTgKF_iKn7AXtYv4w17wbl0NhzOWRGjZHd9elYOATZAhT5iAl1OW_G2aILtkRXriVBoEK3fEF8g01QdGw-kn6MnIK94rY0gDUiTUjUAvTnqhoYjpaR6AIlZbKT1DWomACWg7FY_5GNXqz-ZTJltk8n2nINb0D709GZ1POwvb-31UcwUygMG1dc14x0exl0dJRkrZpc5DzxAg4KYP83jiED-UgIF"/>
+<span class="absolute top-2.5 left-2.5 px-2 py-0.5 bg-porcelain border border-cool-stone font-mono text-[10px] text-deep-slate uppercase font-medium">Decorative</span>
 </div>
-<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors mb-2">Table &amp; Floor</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">Tactile marble, patinated bronze, and hand-blown crystal atelier lamps.</p>
+<h3 class="font-display text-lg font-semibold text-deep-slate mb-1">Table &amp; Atelier</h3>
+<p class="font-body text-[13px] text-blue-gray mb-4">Tactile stone, matte ceramic, and cordless architectural accents.</p>
 </div>
-<div class="pt-4 flex flex-wrap gap-1.5">
-<span class="px-2 py-1 bg-surface-container font-caption-specs text-caption-specs text-on-surface-variant">Tactile Touch Dim</span>
-<span class="px-2 py-1 bg-surface-container font-caption-specs text-caption-specs text-on-surface-variant">Wireless Base</span>
-<span class="px-2 py-1 bg-surface-container font-caption-specs text-caption-specs text-on-surface-variant">CRI 98+</span>
+<div class="pt-3 border-t border-cool-stone/70">
+<span class="font-mono text-[11px] text-deep-slate font-medium">Touch Dimmable · Type-C · CRI 98+</span>
 </div>
 </div>
-<!-- Card 6: Spotlights & Downlights -->
-<div class="group bg-surface-charcoal p-6 flex flex-col justify-between transition-all duration-300 hover:bg-surface-container-high hover:shadow-xl">
+<!-- 6. Downlights & Spots -->
+<div class="group bg-mist-gray border border-cool-stone p-5 flex flex-col justify-between hover:border-deep-slate transition-colors duration-200">
 <div>
-<div class="relative w-full h-64 bg-surface-container overflow-hidden mb-6 flex items-center justify-center">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Deep recessed dark architectural downlight module with ultra anti-glare micro-aperture optic casting clean sharp light cone on dark surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBd7in_lA2w-EHgU1w--J_sVTt4TDx5fnK9iwQD5hEWTx0Zp7w21h8DvISMlwvwYngU9U16bPnz1n4X-rafXPNAFms1QHs1TyfP3KD0XStM9uTMgTZsAZgbNJ9FS9lPeTZ16FweLJEnEnP2wf0bKDqB754iH4P5TPnOBtmPNCtCpUV6hmsAcJjNtSEjfFevOUAhTl7ZD478qifSwsHbch5Pm4RyPZ2hQK7_efx5wR8GaHHIEBvotw3s"/>
-<span class="absolute top-3 left-3 px-2 py-1 bg-surface-container-lowest/80 backdrop-blur-sm font-caption-specs text-caption-specs text-primary uppercase">Technical</span>
+<div class="relative w-full h-56 bg-porcelain overflow-hidden mb-5 border border-cool-stone/60 flex items-center justify-center">
+<img alt="Deep recessed dark architectural downlight" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBd7in_lA2w-EHgU1w--J_sVTt4TDx5fnK9iwQD5hEWTx0Zp7w21h8DvISMlwvwYngU9U16bPnz1n4X-rafXPNAFms1QHs1TyfP3KD0XStM9uTMgTZsAZgbNJ9FS9lPeTZ16FweLJEnEnP2wf0bKDqB754iH4P5TPnOBtmPNCtCpUV6hmsAcJjNtSEjfFevOUAhTl7ZD478qifSwsHbch5Pm4RyPZ2hQK7_efx5wR8GaHHIEBvotw3s"/>
+<span class="absolute top-2.5 left-2.5 px-2 py-0.5 bg-porcelain border border-cool-stone font-mono text-[10px] text-deep-slate uppercase font-medium">Technical</span>
 </div>
-<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors mb-2">Downlights &amp; Spots</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">Deep-recessed glare-free architectural apertures with UGR &lt; 10.</p>
+<h3 class="font-display text-lg font-semibold text-deep-slate mb-1">Downlights &amp; Spots</h3>
+<p class="font-body text-[13px] text-blue-gray mb-4">Trimless deep-recessed micro-apertures with UGR &lt; 10 comfort optics.</p>
 </div>
-<div class="pt-4 flex flex-wrap gap-1.5">
-<span class="px-2 py-1 bg-surface-container font-caption-specs text-caption-specs text-on-surface-variant">UGR &lt; 10</span>
-<span class="px-2 py-1 bg-surface-container font-caption-specs text-caption-specs text-on-surface-variant">DALI-2</span>
-<span class="px-2 py-1 bg-surface-container font-caption-specs text-caption-specs text-on-surface-variant">Trimless</span>
+<div class="pt-3 border-t border-cool-stone/70">
+<span class="font-mono text-[11px] text-deep-slate font-medium">UGR &lt; 10 · Trimless · DALI-2</span>
 </div>
 </div>
-<!-- Card 7: Linear Architectural Profiles -->
-<div class="group bg-surface-charcoal p-6 flex flex-col justify-between transition-all duration-300 hover:bg-surface-container-high hover:shadow-xl">
+<!-- 7. Linear Profiles -->
+<div class="group bg-mist-gray border border-cool-stone p-5 flex flex-col justify-between hover:border-deep-slate transition-colors duration-200">
 <div>
-<div class="relative w-full h-64 bg-surface-container overflow-hidden mb-6 flex items-center justify-center">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Continuous ultra-slim seamless magnetic track linear profile with invisible recessed accent modules on graphite ceiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7M0fLhs8fw7tViXN4vHyPV29lYnDNH05wNfMP8glUFcjX_hfhhKLJsVTgvv-FF5j2AG_L6Ha4qt3TbNCs2XBkDl6GEMccd1fzEigCFIDqZOXEkUoOr9lqc1B1aUG6EkH328GhwSZW2iHAAi92hJDspHp1Qk20dkO_lqpXeI6cXXk-LB7lIL1FGs5M5yCAGqNyblukdoVHk568n3Em5rLygBsYBpDuowQeaU41xOA2EHXwTilVhF5S"/>
-<span class="absolute top-3 left-3 px-2 py-1 bg-surface-container-lowest/80 backdrop-blur-sm font-caption-specs text-caption-specs text-primary uppercase">Architectural</span>
+<div class="relative w-full h-56 bg-porcelain overflow-hidden mb-5 border border-cool-stone/60 flex items-center justify-center">
+<img alt="Magnetic linear profile on concrete ceiling" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7M0fLhs8fw7tViXN4vHyPV29lYnDNH05wNfMP8glUFcjX_hfhhKLJsVTgvv-FF5j2AG_L6Ha4qt3TbNCs2XBkDl6GEMccd1fzEigCFIDqZOXEkUoOr9lqc1B1aUG6EkH328GhwSZW2iHAAi92hJDspHp1Qk20dkO_lqpXeI6cXXk-LB7lIL1FGs5M5yCAGqNyblukdoVHk568n3Em5rLygBsYBpDuowQeaU41xOA2EHXwTilVhF5S"/>
+<span class="absolute top-2.5 left-2.5 px-2 py-0.5 bg-porcelain border border-cool-stone font-mono text-[10px] text-deep-slate uppercase font-medium">Architectural</span>
 </div>
-<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors mb-2">Linear Profiles</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">Magnetic continuous track channels with hot-swappable optical inserts.</p>
+<h3 class="font-display text-lg font-semibold text-deep-slate mb-1">Linear Track Channels</h3>
+<p class="font-body text-[13px] text-blue-gray mb-4">48V ultra-slim magnetic tracks with modular click-in optical inserts.</p>
 </div>
-<div class="pt-4 flex flex-wrap gap-1.5">
-<span class="px-2 py-1 bg-surface-container font-caption-specs text-caption-specs text-on-surface-variant">48V Magnetic</span>
-<span class="px-2 py-1 bg-surface-container font-caption-specs text-caption-specs text-on-surface-variant">Custom Lengths</span>
-<span class="px-2 py-1 bg-surface-container font-caption-specs text-caption-specs text-on-surface-variant">0-10V</span>
+<div class="pt-3 border-t border-cool-stone/70">
+<span class="font-mono text-[11px] text-deep-slate font-medium">48V Magnetic · Custom Runs · 0-10V</span>
 </div>
 </div>
-<!-- Card 8: Outdoor & Motion Lights -->
-<div class="group bg-surface-charcoal p-6 flex flex-col justify-between transition-all duration-300 hover:bg-surface-container-high hover:shadow-xl">
+<!-- 8. Outdoor & Bollards -->
+<div class="group bg-mist-gray border border-cool-stone p-5 flex flex-col justify-between hover:border-deep-slate transition-colors duration-200">
 <div>
-<div class="relative w-full h-64 bg-surface-container overflow-hidden mb-6 flex items-center justify-center">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Solid machined bronze outdoor architectural bollard luminaire casting warm downward grazing light on gravel pathway at night" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeryxkQ-LPL-n7c_FNEQD7obZpWrosCsr2h5G8q2ZgdvtAo-kA5SSZav4kbPnMCWSslS6uh7jjq7Mw6q40zrABHXSYqa7FjKkZqQ3i_61ihpEhxUjbu0MwfaCkULE9XkqmHpyK5n8Fg0hUdRB_WqUd19xEiUdVilzSX0QNwFFIcwe4YPRj43IDbv_Yl7qN90KZSskbEEnW_MuX1LR9mz6BN5iJIktFUSpUcOWXHvJy7qGlOtVAceNl"/>
-<span class="absolute top-3 left-3 px-2 py-1 bg-surface-container-lowest/80 backdrop-blur-sm font-caption-specs text-caption-specs text-primary uppercase">Technical</span>
+<div class="relative w-full h-56 bg-porcelain overflow-hidden mb-5 border border-cool-stone/60 flex items-center justify-center">
+<img alt="Outdoor architectural bollard luminaire" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeryxkQ-LPL-n7c_FNEQD7obZpWrosCsr2h5G8q2ZgdvtAo-kA5SSZav4kbPnMCWSslS6uh7jjq7Mw6q40zrABHXSYqa7FjKkZqQ3i_61ihpEhxUjbu0MwfaCkULE9XkqmHpyK5n8Fg0hUdRB_WqUd19xEiUdVilzSX0QNwFFIcwe4YPRj43IDbv_Yl7qN90KZSskbEEnW_MuX1LR9mz6BN5iJIktFUSpUcOWXHvJy7qGlOtVAceNl"/>
+<span class="absolute top-2.5 left-2.5 px-2 py-0.5 bg-porcelain border border-cool-stone font-mono text-[10px] text-deep-slate uppercase font-medium">Technical</span>
 </div>
-<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors mb-2">Outdoor &amp; Motion</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">Architectural IP65/IP67 marine-grade exterior illumination and discreet sensors.</p>
+<h3 class="font-display text-lg font-semibold text-deep-slate mb-1">Outdoor &amp; Facade</h3>
+<p class="font-body text-[13px] text-blue-gray mb-4">Marine-grade machined bronze path luminaires &amp; weatherproof grazers.</p>
 </div>
-<div class="pt-4 flex flex-wrap gap-1.5">
-<span class="px-2 py-1 bg-surface-container font-caption-specs text-caption-specs text-on-surface-variant">IP67 Waterproof</span>
-<span class="px-2 py-1 bg-surface-container font-caption-specs text-caption-specs text-on-surface-variant">Marine Bronze</span>
-<span class="px-2 py-1 bg-surface-container font-caption-specs text-caption-specs text-on-surface-variant">IK09 Impact</span>
+<div class="pt-3 border-t border-cool-stone/70">
+<span class="font-mono text-[11px] text-deep-slate font-medium">IP67 Waterproof · Marine Bronze · IK09</span>
 </div>
 </div>
 </div>
 </div>
 </section>
-<!-- 5. EDITORIAL BRAND STORY ("THE DUOTONE PHILOSOPHY") ON WARM IVORY PANEL (#F6F1E7) -->
-<section class="w-full bg-canvas-light text-text-on-light py-space-xl px-margin md:px-margin-tablet lg:px-margin-desktop overflow-hidden">
+<!-- 5. BRAND STORY ("BETWEEN THE SHADOW AND THE SPARK") -->
+<section class="w-full py-space-xl px-margin md:px-margin-tablet lg:px-margin-desktop bg-mist-gray border-b border-cool-stone/60" id="brand-philosophy">
 <div class="max-w-7xl mx-auto">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 <!-- Narrative Column (7 cols) -->
 <div class="lg:col-span-7">
 <div class="inline-flex items-center gap-2 mb-4">
-<span class="w-2 h-2 rounded-full bg-primary-container"></span>
-<span class="font-label-eyebrow text-label-eyebrow tracking-widest text-on-tertiary-container uppercase">THE DUOTONE PHILOSOPHY</span>
+<span class="w-2 h-2 rounded-full bg-electric-blue"></span>
+<span class="font-mono text-[11px] uppercase tracking-[0.2em] text-deep-slate font-semibold">THE ARCHITECTURAL PHILOSOPHY</span>
 </div>
-<h2 class="font-headline-lg text-headline-md md:text-headline-lg text-text-on-light tracking-tight mb-8">
-            Between the Shadow and the Spark.
-          </h2>
-<div class="space-y-6 font-body-lg text-body-lg text-text-on-light/85 font-light leading-relaxed mb-10">
+<h2 class="font-display text-3xl md:text-5xl font-medium tracking-tight text-deep-slate mb-6 leading-tight">
+                Between the Shadow and the Spark.
+              </h2>
+<div class="space-y-4 font-body text-base text-blue-gray font-light leading-relaxed mb-8">
 <p>
-              Founded in Surat, On Off Lighting Co. emerged from a singular conviction: light is not merely functional hardware, but the emotional texture of architecture.
-            </p>
-<p class="text-body-md font-body-md text-text-on-light/75">
-              We bridge the world's most inventive lighting ateliers with Surat’s burgeoning landscape of modern penthouses, courtyard villas, and visionary commercial headquarters. Every fixture in our Bhatar showroom is curated for optical purity, color fidelity, and sculptural structural presence.
-            </p>
+                  Founded in Surat, On Off Lighting Co. emerged from a singular conviction: light is not merely electrical hardware, but the tactile, emotional soul of space.
+                </p>
+<p>
+                  We collaborate with global lighting design studios to bring museum-grade architectural optics into Gujarat’s evolving landscape of minimalist penthouses, microcement villas, and flagship commercial spaces. Every fixture in our Bhatar showroom is engineered for optical purity, color stability, and timeless geometric presence.
+                </p>
 </div>
-<!-- Curated Stats Mosaic -->
-<div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 bg-text-on-light/5 p-6 rounded-lg">
+<!-- Metric Counter Cards in Porcelain -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+<div class="bg-porcelain border border-cool-stone p-5">
+<span class="font-display text-3xl text-deep-slate font-semibold block mb-1">1,200+</span>
+<span class="font-mono text-[10px] uppercase tracking-wider text-blue-gray">Live Fixtures on Display</span>
+</div>
+<div class="bg-porcelain border border-cool-stone p-5">
+<span class="font-display text-3xl text-deep-slate font-semibold block mb-1">2700–6500K</span>
+<span class="font-mono text-[10px] uppercase tracking-wider text-blue-gray">Tunable White Precision</span>
+</div>
+<div class="bg-porcelain border border-cool-stone p-5">
+<span class="font-display text-3xl text-deep-slate font-semibold block mb-1">15+ Years</span>
+<span class="font-mono text-[10px] uppercase tracking-wider text-blue-gray">Studio Practice in Surat</span>
+</div>
+</div>
+<!-- Curators Quote -->
+<div class="pl-5 border-l-2 border-electric-blue">
+<p class="font-display text-lg italic text-deep-slate mb-1">
+                  “Light transforms stone and concrete into emotion. Turn it on; turn the noise off.”
+                </p>
+<span class="font-mono text-[10px] uppercase tracking-widest text-blue-gray">
+                  — On Off Curation Atelier, Surat
+                </span>
+</div>
+</div>
+<!-- Visual Column (5 cols) -->
+<div class="lg:col-span-5">
+<div class="relative bg-porcelain border border-cool-stone p-3">
+<div class="aspect-[4/5] overflow-hidden bg-mist-gray">
+<img alt="Architectural lighting study in Surat residence" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFo3vmUc7jlRkyk9h7uL8BJiP51vqFWBV_JDQM2X4VZ6I_sau4p0aGQMmHUJvE1jN9o2LFWhNGLQay8hgImfVrDLqx4qhMrp7-xO6zQ5MzuKQmHRCh7eeJ6a5gOc7vYjJQ8n1zeNanujLpn2DI9a5oaUHBS-UXsuj9vqCDMBbhODXny4pjeVozq9Ss71hIqE40qogu7kWMSikhkUpG1Gl3V2t5cRMqbvAqCrREn5wdYPM39nnuRKio"/>
+</div>
+<div class="pt-4 pb-2 px-2 flex items-center justify-between">
 <div>
-<span class="font-headline-md text-headline-md text-on-tertiary-container block font-normal">1,200+</span>
-<span class="font-caption-specs text-caption-specs uppercase tracking-wider text-text-on-light/70">Architectural Fixtures on Live Display</span>
+<span class="font-mono text-[10px] uppercase tracking-widest text-deep-slate font-semibold block">Case Study No. 08</span>
+<span class="font-body text-[12px] text-blue-gray">Fluted Stone Wall Grazing · Surat Private Residence</span>
 </div>
-<div>
-<span class="font-headline-md text-headline-md text-on-tertiary-container block font-normal">2700K–6500K</span>
-<span class="font-caption-specs text-caption-specs uppercase tracking-wider text-text-on-light/70">Tunable White Spectrum Precision</span>
-</div>
-<div>
-<span class="font-headline-md text-headline-md text-on-tertiary-container block font-normal">15+ Years</span>
-<span class="font-caption-specs text-caption-specs uppercase tracking-wider text-text-on-light/70">Crafting Light in Gujarat</span>
-</div>
-</div>
-<!-- Curator's Quote Callout -->
-<div class="mt-10 pl-6 border-l-2 border-primary-container">
-<p class="font-title-editorial text-title-editorial italic text-text-on-light mb-2">
-              “Light transforms stone and wood into emotion. Turn it on; turn the world off.”
-            </p>
-<span class="font-caption-specs text-caption-specs uppercase tracking-widest text-text-on-light/60">
-              — On Off Curation Team, Bhatar Pavilion
-            </span>
-</div>
-</div>
-<!-- Visual Column: Contrast Duotone Architectural Still (5 cols) -->
-<div class="lg:col-span-5 relative">
-<div class="relative w-full aspect-[4/5] bg-surface-charcoal overflow-hidden shadow-2xl">
-<img class="w-full h-full object-cover" data-alt="Chiaroscuro high-fashion architectural lighting portrait, solid raw stone wall with dramatic soft golden amber beam slicing across the texture in a luxury Surat home" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFo3vmUc7jlRkyk9h7uL8BJiP51vqFWBV_JDQM2X4VZ6I_sau4p0aGQMmHUJvE1jN9o2LFWhNGLQay8hgImfVrDLqx4qhMrp7-xO6zQ5MzuKQmHRCh7eeJ6a5gOc7vYjJQ8n1zeNanujLpn2DI9a5oaUHBS-UXsuj9vqCDMBbhODXny4pjeVozq9Ss71hIqE40qogu7kWMSikhkUpG1Gl3V2t5cRMqbvAqCrREn5wdYPM39nnuRKio"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-<div class="absolute bottom-6 left-6 right-6 p-4 bg-background/90 backdrop-blur-md text-on-surface">
-<span class="font-caption-specs text-caption-specs text-primary uppercase tracking-widest block mb-1">Architectural Study No. 04</span>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Bespoke Fluted Travertine Wall Grazing · Private Residence, Dumas Road, Surat</p>
+<span class="font-mono text-[11px] text-electric-blue font-semibold">2700K CRI 98</span>
 </div>
 </div>
 </div>
 </div>
 </div>
 </section>
-<!-- 6. "VISIT US" SHOWROOM EXPERIENCE & LOCATION SECTION -->
-<section class="w-full py-space-xl px-margin md:px-margin-tablet lg:px-margin-desktop bg-background" id="showroom">
+<!-- 6. "VISIT US" SHOWROOM EXPERIENCE (Bhatar Flagship) -->
+<section class="w-full py-space-xl px-margin md:px-margin-tablet lg:px-margin-desktop bg-porcelain" id="showroom">
 <div class="max-w-7xl mx-auto">
 <!-- Section Header -->
 <div class="max-w-3xl mb-12">
 <div class="flex items-center gap-2 mb-3">
-<span class="w-2 h-2 rounded-full bg-filament-glow"></span>
-<span class="font-label-eyebrow text-label-eyebrow uppercase tracking-widest text-primary">SURAT FLAGSHIP</span>
+<span class="w-2 h-2 rounded-full bg-electric-blue"></span>
+<span class="font-mono text-[11px] uppercase tracking-[0.2em] text-deep-slate font-semibold">SURAT FLAGSHIP PAVILION</span>
 </div>
-<h2 class="font-headline-lg text-headline-md md:text-headline-lg text-on-surface tracking-tight mb-4">
-          Step Inside the Gallery of Light
-        </h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant font-light">
-          Visit our bespoke Bhatar architectural pavilion to experience light in true spatial scale, test automated DALI systems, and inspect tactile material finishes.
-        </p>
+<h2 class="font-display text-3xl md:text-4xl text-deep-slate tracking-tight font-medium mb-3">
+              Step Inside the Gallery of Light
+            </h2>
+<p class="font-body text-base text-blue-gray">
+              Experience lighting fixtures at actual spatial scale, simulate circadian rhythm sequences, and review architectural specifications in our Bhatar studio.
+            </p>
 </div>
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-<!-- Showroom Information & Actions (6 cols) -->
-<div class="lg:col-span-6 flex flex-col justify-between space-y-8">
-<!-- Address & Status Box -->
-<div class="p-8 bg-surface-charcoal shadow-xl">
-<div class="flex items-center justify-between gap-4 mb-6">
+<!-- Left Info Column (6 cols) -->
+<div class="lg:col-span-6 space-y-6">
+<!-- Location Card in Mist Gray -->
+<div class="p-8 bg-mist-gray border border-cool-stone">
+<div class="flex items-center justify-between gap-4 mb-6 pb-6 border-b border-cool-stone">
 <div class="flex items-center gap-2.5">
 <span class="relative flex h-2.5 w-2.5">
-<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-filament-glow opacity-75"></span>
-<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-filament-glow"></span>
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-electric-blue opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-electric-blue"></span>
 </span>
-<span class="font-caption-specs text-caption-specs uppercase tracking-widest text-primary">Showroom Open Today</span>
+<span class="font-mono text-[11px] uppercase tracking-widest text-deep-slate font-semibold">Bhatar Studio Open Today</span>
 </div>
-<span class="font-caption-specs text-caption-specs uppercase tracking-wider text-on-surface-variant">21.1682° N, 72.8083° E</span>
+<span class="font-mono text-[11px] uppercase tracking-wider text-blue-gray">21.1682° N, 72.8083° E</span>
 </div>
-<div class="space-y-4">
+<div class="space-y-5">
 <div>
-<span class="font-caption-specs text-caption-specs uppercase tracking-widest text-outline block mb-1">Permanent Location</span>
-<p class="font-body-lg text-body-lg text-on-surface font-light leading-snug">
-                  J/3, Udhana-Magdalla Rd, G.P. Society, Swaminagar Society, Bhatar, Athwa, Surat, Gujarat 395007
-                </p>
+<span class="font-mono text-[10px] uppercase tracking-widest text-blue-gray block mb-1">Permanent Address</span>
+<p class="font-body text-[15px] text-deep-slate font-medium leading-relaxed">
+                      J/3, Udhana-Magdalla Rd, G.P. Society, Swaminagar Society, Bhatar, Athwa, Surat, Gujarat 395007
+                    </p>
 </div>
 <div>
-<span class="font-caption-specs text-caption-specs uppercase tracking-widest text-outline block mb-1">Pavilion Hours</span>
-<p class="font-label-ui text-label-ui text-on-surface font-medium">
-                  Open Daily · 10:30 – 20:30 IST
-                </p>
+<span class="font-mono text-[10px] uppercase tracking-widest text-blue-gray block mb-1">Operating Hours</span>
+<p class="font-mono text-[13px] text-deep-slate font-medium">
+                      Open Daily · 10:30 – 20:30 IST
+                    </p>
 </div>
 </div>
-<!-- Amenities Pills -->
-<div class="pt-6 mt-6 flex flex-wrap gap-2">
-<span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-surface-container font-caption-specs text-caption-specs uppercase tracking-wider text-on-surface">
-<span class="material-symbols-outlined text-[14px] text-primary">local_parking</span>
-                Complimentary Valet Parking
-              </span>
-<span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-surface-container font-caption-specs text-caption-specs uppercase tracking-wider text-on-surface">
-<span class="material-symbols-outlined text-[14px] text-primary">dark_mode</span>
-                Dark Room Simulation Studio
-              </span>
-<span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-surface-container font-caption-specs text-caption-specs uppercase tracking-wider text-on-surface">
-<span class="material-symbols-outlined text-[14px] text-primary">menu_book</span>
-                Architectural Spec Library
-              </span>
+<!-- Studio Amenities Chips -->
+<div class="pt-6 mt-6 border-t border-cool-stone flex flex-wrap gap-2">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 bg-porcelain border border-cool-stone font-mono text-[10px] uppercase tracking-wider text-deep-slate">
+<span class="material-symbols-outlined text-[13px] text-electric-blue">local_parking</span>
+                    Valet Parking
+                  </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 bg-porcelain border border-cool-stone font-mono text-[10px] uppercase tracking-wider text-deep-slate">
+<span class="material-symbols-outlined text-[13px] text-electric-blue">dark_mode</span>
+                    Darkroom Simulator
+                  </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 bg-porcelain border border-cool-stone font-mono text-[10px] uppercase tracking-wider text-deep-slate">
+<span class="material-symbols-outlined text-[13px] text-electric-blue">menu_book</span>
+                    Architectural Spec Library
+                  </span>
 </div>
 </div>
-<!-- Action Buttons Stack -->
+<!-- Action Buttons -->
 <div class="space-y-3">
-<a class="w-full flex items-center justify-center gap-3 px-6 py-4 bg-primary-container text-on-primary-container font-label-ui text-label-ui uppercase tracking-widest hover:bg-filament-glow transition-all shadow-md" href="https://maps.google.com/?q=Bhatar+Surat+Gujarat" rel="noopener noreferrer" target="_blank">
+<a class="w-full flex items-center justify-center gap-3 px-6 py-4 bg-deep-slate text-porcelain font-mono text-[12px] uppercase tracking-widest font-semibold hover:bg-electric-blue transition-colors" href="https://maps.google.com/?q=Bhatar+Surat+Gujarat" rel="noopener noreferrer" target="_blank">
 <span class="material-symbols-outlined text-[18px]">near_me</span>
 <span>Get Directions on Google Maps</span>
 </a>
-<a class="w-full flex items-center justify-center gap-3 px-6 py-4 bg-surface-container-high text-on-surface font-label-ui text-label-ui uppercase tracking-widest hover:bg-surface-bright transition-all shadow-sm" href="https://wa.me/919825000000" rel="noopener noreferrer" target="_blank">
-<span class="material-symbols-outlined text-[18px] text-primary">chat</span>
+<a class="w-full flex items-center justify-center gap-3 px-6 py-4 bg-mist-gray border border-cool-stone text-deep-slate font-mono text-[12px] uppercase tracking-widest font-semibold hover:border-deep-slate transition-colors" href="https://wa.me/919825000000" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px] text-electric-blue">chat</span>
 <span>Chat with Lighting Consultant on WhatsApp</span>
 </a>
-<button class="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-surface-charcoal text-on-surface-variant hover:text-on-surface font-label-ui text-label-ui uppercase tracking-widest transition-colors">
-<span class="material-symbols-outlined text-[16px] text-primary">event</span>
-<span>Book Private Architectural Appointment</span>
-</button>
 </div>
 </div>
-<!-- Showroom Visual & Map Container (6 cols) -->
+<!-- Right Visual Column (6 cols) -->
 <div class="lg:col-span-6 space-y-6">
-<!-- Architectural Showroom Render Placeholder -->
-<div class="relative w-full h-80 bg-surface-container overflow-hidden shadow-2xl">
-<img class="w-full h-full object-cover" data-alt="Monolithic architectural lighting showroom pavilion facade in Surat at twilight with minimal glass vitrines, dramatic warm light beams illuminating raw concrete and dark stone cladding" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb_etauhYAhCqE6RX5ewiv8raDvs11BdQT-f26URfLUSO1NOVi0-wgPHxSQm7CqE0jhhJKURC-vVaj3Y4W82WXorGfoYazufLtEIRtLTMCIcZ3ENUo2HKHkbbpLKBHi5Hus58Cdw9vly3z3m4ZCgcRO-pCc4RJ9MPQb6LgI1c2y8fLjhfKW16qPdhxTJg3-77k8nUcAhcwkNUuSZbP_HNSJhUdKw4rZ-iALaDhy_BCHukgRUUy3Lo0"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent"></div>
-<div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
-<span class="font-caption-specs text-caption-specs uppercase tracking-widest text-primary">Bhatar Pavilion Facade</span>
-<span class="px-2 py-1 bg-surface-charcoal/90 backdrop-blur-md font-caption-specs text-caption-specs text-on-surface uppercase">On Off Lighting Co.</span>
+<!-- Showroom Facade Image -->
+<div class="relative w-full h-72 bg-mist-gray border border-cool-stone overflow-hidden">
+<img alt="On Off Lighting Co showroom facade in Surat" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb_etauhYAhCqE6RX5ewiv8raDvs11BdQT-f26URfLUSO1NOVi0-wgPHxSQm7CqE0jhhJKURC-vVaj3Y4W82WXorGfoYazufLtEIRtLTMCIcZ3ENUo2HKHkbbpLKBHi5Hus58Cdw9vly3z3m4ZCgcRO-pCc4RJ9MPQb6LgI1c2y8fLjhfKW16qPdhxTJg3-77k8nUcAhcwkNUuSZbP_HNSJhUdKw4rZ-iALaDhy_BCHukgRUUy3Lo0"/>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between p-2.5 bg-porcelain/90 backdrop-blur-sm border border-cool-stone text-deep-slate">
+<span class="font-mono text-[10px] uppercase tracking-widest font-semibold">Bhatar Pavilion Facade</span>
+<span class="font-mono text-[10px] uppercase text-blue-gray">Surat, Gujarat</span>
 </div>
 </div>
-<!-- Location View Map Container -->
-<div class="w-full h-64 bg-cover bg-center shadow-inner relative flex items-center justify-center overflow-hidden" data-alt="Stylized dark architectural satellite cartography of Bhatar, Udhana-Magdalla Road, Surat, Gujarat with gold glowing waypoint pinpoint marker" data-location="Bhatar, Athwa, Surat, Gujarat, India" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBgMelaVMnqsev_pFikYfuVUfykLwBOUcbft04S8Wl2WPHEGrmr5TqoT27YOewdLpcFcu0WV9ZFnWL_9OQH30cE1VMLvJlfvtxb8yEp3ud61dodMlsnqI8K5-loRzKP8pTnFpnABb37kOAQrDAYPDAKdtq6Meey-wfewCo30M-CQl-5jb3fPuub2C0ybyQewQ5xPCN-U8K4t_-Asyg_x2oSojHaIcKncfRLZZbsgDYvJuZYOFYA7xVJ');">
-<!-- Glowing Pin Overlay -->
+<!-- Map Pin Card -->
+<div class="w-full h-60 bg-cover bg-center border border-cool-stone relative flex items-center justify-center overflow-hidden" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBgMelaVMnqsev_pFikYfuVUfykLwBOUcbft04S8Wl2WPHEGrmr5TqoT27YOewdLpcFcu0WV9ZFnWL_9OQH30cE1VMLvJlfvtxb8yEp3ud61dodMlsnqI8K5-loRzKP8pTnFpnABb37kOAQrDAYPDAKdtq6Meey-wfewCo30M-CQl-5jb3fPuub2C0ybyQewQ5xPCN-U8K4t_-Asyg_x2oSojHaIcKncfRLZZbsgDYvJuZYOFYA7xVJ');">
 <div class="relative z-10 flex flex-col items-center">
-<div class="relative flex items-center justify-center w-12 h-12 rounded-full bg-filament-glow/20 shadow-[0_0_30px_rgba(232,163,61,0.6)]">
-<span class="material-symbols-outlined text-[28px] text-primary">pin_drop</span>
+<div class="relative flex items-center justify-center w-12 h-12 rounded-full bg-porcelain border border-cool-stone shadow-md">
+<span class="material-symbols-outlined text-[26px] text-electric-blue">pin_drop</span>
 </div>
-<span class="mt-2 px-3 py-1 bg-surface-container-lowest/90 backdrop-blur-md font-caption-specs text-caption-specs uppercase tracking-widest text-on-surface shadow-md">
-                ON OFF · BHATAR PAVILION
-              </span>
+<span class="mt-2 px-3 py-1 bg-porcelain border border-cool-stone font-mono text-[10px] uppercase tracking-widest text-deep-slate font-semibold shadow-sm">
+                    ON OFF · BHATAR PAVILION
+                  </span>
 </div>
 </div>
 </div>
@@ -690,195 +806,279 @@
 </div>
 </section>
 </div>
+</main>
+<!-- FOOTER -->
+<footer class="w-full bg-mist-gray border-t border-cool-stone">
+<div class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop mb-space-xl">
+<!-- Logo and Newsletter Column -->
+<div class="lg:col-span-5 flex flex-col justify-between pr-0 lg:pr-8">
+<div>
+<a class="inline-block mb-4" href="#">
+<img alt="On Off Lighting Co. Contemporary Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WXsdRYGGjoDREnTosTYfYmxNp7sEd3tdEmeZ9yCKpOR7ptcl-yeMNmHD0HF5GRprWYhSb2odRjaAr5TX9mcc9BfPxJiur-W8FeApJOLvBr-2H8aaeTf7Il8mHHlPjTyXRtc8abHZgGubBplyiM5f-sqIMTZDcfM9VfOWoC0zAxkSBmsEaRAmakdMwMnTQn0OhRXNT-OMmWSf8cmIAIcU0sTIsqnWRTallq4K8zbZECYGm0StjFVXmSNg"/>
+</a>
+<p class="font-body text-[14px] text-blue-gray max-w-sm mb-6">
+              Curated European architectural illumination and bespoke luminaire engineering tailored for high-end spatial aesthetics and elite residences across Gujarat.
+            </p>
+</div>
+<div>
+<span class="font-mono text-[11px] uppercase tracking-widest text-deep-slate font-semibold block mb-1">Archival Monograph Release</span>
+<p class="font-body text-[13px] text-blue-gray mb-3">Receive our quarterly lighting design catalog &amp; technical specification sheets.</p>
+<form class="flex items-center max-w-md border border-cool-stone bg-porcelain" onsubmit="event.preventDefault();">
+<input class="flex-1 bg-transparent py-2.5 px-3 font-mono text-[11px] text-deep-slate placeholder:text-blue-gray/60 focus:outline-none" placeholder="PRACTICE OR EMAIL" required="" type="email"/>
+<button class="font-mono text-[11px] uppercase tracking-widest px-5 py-2.5 bg-deep-slate text-porcelain hover:bg-electric-blue transition-colors shrink-0" type="submit">
+                Request
+              </button>
+</form>
+</div>
+</div>
+<!-- Navigation Links -->
+<div class="lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-8 mt-8 lg:mt-0">
+<div>
+<span class="font-mono text-[11px] uppercase tracking-widest text-deep-slate font-semibold block mb-4">Showroom</span>
+<ul class="space-y-2.5">
+<li><a class="font-body text-[13px] text-blue-gray hover:text-electric-blue transition-colors" href="#showroom">Bhatar Pavilion</a></li>
+<li><a class="font-body text-[13px] text-blue-gray hover:text-electric-blue transition-colors" href="#showroom">Private Appointments</a></li>
+<li><a class="font-body text-[13px] text-blue-gray hover:text-electric-blue transition-colors" href="#collections">Material Archive</a></li>
+<li><a class="font-body text-[13px] text-blue-gray hover:text-electric-blue transition-colors" href="#flip-the-switch-section">Optical Testing Room</a></li>
+</ul>
+</div>
+<div>
+<span class="font-mono text-[11px] uppercase tracking-widest text-deep-slate font-semibold block mb-4">Collections</span>
+<ul class="space-y-2.5">
+<li><a class="font-body text-[13px] text-blue-gray hover:text-electric-blue transition-colors" href="#collections">Linear 48V Magnetic</a></li>
+<li><a class="font-body text-[13px] text-blue-gray hover:text-electric-blue transition-colors" href="#collections">Dark-Light Downlights</a></li>
+<li><a class="font-body text-[13px] text-blue-gray hover:text-electric-blue transition-colors" href="#collections">Sculptural Pendants</a></li>
+<li><a class="font-body text-[13px] text-blue-gray hover:text-electric-blue transition-colors" href="#collections">Acoustic Ceiling Discs</a></li>
+<li><a class="font-body text-[13px] text-blue-gray hover:text-electric-blue transition-colors" href="#collections">Outdoor Bollards</a></li>
+</ul>
+</div>
+<div>
+<span class="font-mono text-[11px] uppercase tracking-widest text-deep-slate font-semibold block mb-4">Studio Location</span>
+<address class="not-italic font-body text-[13px] text-blue-gray leading-relaxed mb-3">
+              J/3, Udhana-Magdalla Rd,<br/>
+              G.P. Society, Bhatar,<br/>
+              Surat 395007, Gujarat
+            </address>
+<div class="flex flex-col gap-0.5">
+<span class="font-mono text-[10px] uppercase tracking-wider text-deep-slate font-semibold">Patron Desk</span>
+<span class="font-mono text-[12px] text-blue-gray">+91 (0261) 829-4100</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Legal and bottom metadata -->
+<div class="pt-6 border-t border-cool-stone flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+<div class="flex flex-wrap items-center gap-6">
+<span class="font-mono text-[11px] uppercase tracking-widest text-blue-gray">© 2025 ON OFF LIGHTING CO. ARCHITECTURAL ILLUMINATION.</span>
+<a class="font-mono text-[11px] uppercase tracking-widest text-blue-gray hover:text-electric-blue transition-colors" href="#">Privacy Policy</a>
+<a class="font-mono text-[11px] uppercase tracking-widest text-blue-gray hover:text-electric-blue transition-colors" href="#">Terms of Service</a>
+<a class="font-mono text-[11px] uppercase tracking-widest text-blue-gray hover:text-electric-blue transition-colors" href="#">DALI-2 Specs</a>
+</div>
+<div class="font-mono text-[11px] uppercase tracking-widest text-blue-gray">
+          Surat · Milan · Copenhagen
+        </div>
+</div>
+</div>
+</footer>
+<!-- INTERACTIVE VANILLA JS SCRIPT (TACTILE DRAG & SPRING CORD INTERACTION) -->
 <script>
-  let isLampOn = false;
+    let isLampLit = false;
+    let isDraggingCord = false;
+    let startPointerY = 0;
+    let currentPullDistance = 0;
+    const ACTIVATION_THRESHOLD = 38; // px required to flip switch
+    const MAX_PULL = 68;
 
-  function playTactileClickSound() {
-    try {
-      const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-      const osc = audioCtx.createOscillator();
-      const gain = audioCtx.createGain();
-      
-      osc.type = 'triangle';
-      osc.frequency.setValueAtTime(isLampOn ? 750 : 540, audioCtx.currentTime);
-      osc.frequency.exponentialRampToValueAtTime(120, audioCtx.currentTime + 0.05);
+    function playMechanicalSwitchSound(lit) {
+      try {
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
 
-      gain.gain.setValueAtTime(0.18, audioCtx.currentTime);
-      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.05);
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(lit ? 840 : 420, audioCtx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(110, audioCtx.currentTime + 0.045);
 
-      osc.connect(gain);
-      gain.connect(audioCtx.destination);
-      osc.start();
-      osc.stop(audioCtx.currentTime + 0.05);
-    } catch (e) {
-      // AudioContext unavailable or blocked by autoplay policies
-    }
-  }
+        gain.gain.setValueAtTime(0.14, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.045);
 
-  function triggerPullCordAction() {
-    const cordGroup = document.getElementById('pull-cord-interactive-group');
-    if (!cordGroup) return;
-
-    // Physical elastic pull-down spring animation
-    cordGroup.style.transform = 'translateY(24px) scaleY(1.08)';
-    
-    setTimeout(() => {
-      toggleTactileLamp(!isLampOn);
-      playTactileClickSound();
-      cordGroup.style.transform = 'translateY(-4px) scaleY(0.97)';
-      setTimeout(() => {
-        cordGroup.style.transform = 'translateY(0) scaleY(1)';
-      }, 140);
-    }, 120);
-  }
-
-  function toggleTactileLamp(turnOn) {
-    isLampOn = turnOn;
-
-    const secBg = document.getElementById('flip-the-switch-section');
-    const stage = document.getElementById('lamp-stage-wrapper');
-    const btnOff = document.getElementById('lamp-btn-off');
-    const btnOn = document.getElementById('lamp-btn-on');
-
-    // Aura & Blooms
-    const coreAura = document.getElementById('lamp-core-aura');
-    const bloomTop = document.getElementById('ambient-bloom-top');
-    const bloomCone = document.getElementById('ambient-bloom-cone');
-    const bloomTable = document.getElementById('ambient-bloom-table');
-
-    // SVG elements
-    const topBeam = document.getElementById('svg-top-beam');
-    const bottomBeam = document.getElementById('svg-bottom-beam');
-    const shadeBody = document.getElementById('lamp-shade-body');
-    const shadeTopRim = document.getElementById('shade-top-rim');
-    const shadeBottomRim = document.getElementById('shade-bottom-rim');
-    const ceramicVase = document.getElementById('ceramic-vase-body');
-    const ceramicSheen = document.getElementById('ceramic-sheen');
-    const tableFacet = document.getElementById('table-top-facet');
-
-    // HUD items
-    const hudState = document.getElementById('hud-lamp-state');
-    const hudDot = document.getElementById('hud-status-dot');
-    const hudKelvin = document.getElementById('hud-kelvin');
-    const hudLux = document.getElementById('hud-lux');
-    const hudCri = document.getElementById('hud-cri');
-
-    if (turnOn) {
-      // Background warmth transition
-      if (secBg) secBg.style.backgroundColor = '#25201a';
-      if (stage) stage.style.background = 'radial-gradient(ellipse at 50% 38%, rgba(54, 40, 26, 0.95) 0%, rgba(20, 17, 14, 1) 100%)';
-
-      // Blooms ON
-      if (coreAura) {
-        coreAura.style.opacity = '1';
-        coreAura.style.transform = 'translate(-50%, 0) scale(1.08)';
-      }
-      if (bloomTop) bloomTop.style.opacity = '0.9';
-      if (bloomCone) bloomCone.style.opacity = '0.95';
-      if (bloomTable) bloomTable.style.opacity = '1';
-
-      // SVG Fixture ON state
-      if (topBeam) topBeam.style.opacity = '0.55';
-      if (bottomBeam) bottomBeam.style.opacity = '0.65';
-      if (shadeBody) {
-        shadeBody.setAttribute('fill', 'url(#shadeOnGrad)');
-        shadeBody.style.filter = 'drop-shadow(0 0 25px rgba(255, 170, 43, 0.8))';
-      }
-      if (shadeTopRim) shadeTopRim.setAttribute('fill', '#FFE0A3');
-      if (shadeBottomRim) shadeBottomRim.setAttribute('fill', '#FFE6B8');
-      if (ceramicVase) ceramicVase.setAttribute('fill', 'url(#ceramicBaseOn)');
-      if (ceramicSheen) ceramicSheen.style.opacity = '0.9';
-      if (tableFacet) tableFacet.setAttribute('fill', 'url(#woodSurfaceOn)');
-
-      // HUD Button classes
-      if (btnOn) btnOn.className = 'px-4 py-1.5 font-label-ui text-label-ui uppercase tracking-wider bg-primary-container text-on-primary-container font-bold shadow-sm transition-all';
-      if (btnOff) btnOff.className = 'px-4 py-1.5 font-label-ui text-label-ui uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors';
-
-      // Live Telemetry
-      if (hudState) {
-        hudState.textContent = 'ON · Illuminated';
-        hudState.className = 'font-label-ui text-label-ui text-primary font-bold uppercase';
-      }
-      if (hudDot) {
-        hudDot.className = 'w-2 h-2 rounded-full bg-filament-glow animate-pulse';
-      }
-      if (hudKelvin) {
-        hudKelvin.textContent = '2450K · Warm Filament';
-        hudKelvin.className = 'font-label-ui text-label-ui text-primary font-medium';
-      }
-      if (hudLux) {
-        hudLux.textContent = '480 lx · Spatial Radiance';
-        hudLux.className = 'font-label-ui text-label-ui text-on-surface font-medium';
-      }
-      if (hudCri) {
-        hudCri.textContent = 'CRI 98.6 (R9: 94.2)';
-        hudCri.className = 'font-label-ui text-label-ui text-on-surface font-medium';
-      }
-
-    } else {
-      // Background dark transition
-      if (secBg) secBg.style.backgroundColor = '#141312';
-      if (stage) stage.style.background = 'radial-gradient(ellipse at 50% 40%, rgba(25, 23, 21, 1) 0%, rgba(12, 11, 10, 1) 100%)';
-
-      // Blooms OFF
-      if (coreAura) {
-        coreAura.style.opacity = '0';
-        coreAura.style.transform = 'translate(-50%, 0) scale(0.9)';
-      }
-      if (bloomTop) bloomTop.style.opacity = '0';
-      if (bloomCone) bloomCone.style.opacity = '0';
-      if (bloomTable) bloomTable.style.opacity = '0';
-
-      // SVG Fixture OFF state
-      if (topBeam) topBeam.style.opacity = '0';
-      if (bottomBeam) bottomBeam.style.opacity = '0';
-      if (shadeBody) {
-        shadeBody.setAttribute('fill', 'url(#shadeOffGrad)');
-        shadeBody.style.filter = 'none';
-      }
-      if (shadeTopRim) shadeTopRim.setAttribute('fill', '#242220');
-      if (shadeBottomRim) shadeBottomRim.setAttribute('fill', '#1b1a19');
-      if (ceramicVase) ceramicVase.setAttribute('fill', 'url(#ceramicBaseOff)');
-      if (ceramicSheen) ceramicSheen.style.opacity = '0';
-      if (tableFacet) tableFacet.setAttribute('fill', 'url(#woodSurfaceOff)');
-
-      // HUD Button classes
-      if (btnOff) btnOff.className = 'px-4 py-1.5 font-label-ui text-label-ui uppercase tracking-wider bg-surface-container-high text-on-surface font-bold shadow-sm transition-all';
-      if (btnOn) btnOn.className = 'px-4 py-1.5 font-label-ui text-label-ui uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors';
-
-      // Live Telemetry
-      if (hudState) {
-        hudState.textContent = 'OFF · Standby';
-        hudState.className = 'font-label-ui text-label-ui text-on-surface font-semibold uppercase';
-      }
-      if (hudDot) {
-        hudDot.className = 'w-2 h-2 rounded-full bg-outline-variant';
-      }
-      if (hudKelvin) {
-        hudKelvin.textContent = '0 K · Ambient Dark';
-        hudKelvin.className = 'font-label-ui text-label-ui text-on-surface-variant font-medium';
-      }
-      if (hudLux) {
-        hudLux.textContent = '12 lx · Residual';
-        hudLux.className = 'font-label-ui text-label-ui text-on-surface-variant font-medium';
-      }
-      if (hudCri) {
-        hudCri.textContent = 'CRI 98.6 High Fidelity';
-        hudCri.className = 'font-label-ui text-label-ui text-on-surface-variant font-medium';
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.048);
+      } catch (e) {
+        // Audio unavailable or policy restricted
       }
     }
-  }
 
-  // Filter Bar Micro-interaction
-  document.addEventListener('DOMContentLoaded', () => {
-    const filterButtons = document.querySelectorAll('.collection-filter-btn');
-    filterButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterButtons.forEach(b => {
-          b.className = 'collection-filter-btn px-5 py-2 font-label-ui text-label-ui uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors';
+    function updateCordVisuals(distY, animateElastic = false) {
+      const cordLine = document.getElementById('cord-line-path');
+      const cordToggle = document.getElementById('cord-toggle-group');
+      if (!cordLine || !cordToggle) return;
+
+      const baseEndY = 300;
+      const targetY = baseEndY + distY;
+
+      if (animateElastic) {
+        cordLine.style.transition = 'd 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+        cordToggle.style.transition = 'transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+      } else {
+        cordLine.style.transition = 'none';
+        cordToggle.style.transition = 'none';
+      }
+
+      // Dynamic curved bezier with physical tension
+      const midControlX = 316 + (distY * 0.12);
+      const midControlY = 200 + (targetY - 200) * 0.55;
+      cordLine.setAttribute('d', `M 316 200 Q ${midControlX} ${midControlY} 316 ${targetY}`);
+      cordToggle.setAttribute('transform', `translate(316, ${targetY})`);
+    }
+
+    function setArchitecturalIllumination(state) {
+      isLampLit = state;
+      playMechanicalSwitchSound(state);
+
+      // Light Blooms & Atmospheric Layers
+      const wallCast = document.getElementById('light-cast-wall');
+      const ceilingCast = document.getElementById('light-cast-ceiling');
+      const tableCast = document.getElementById('light-cast-table');
+      const ambientCast = document.getElementById('light-cast-ambient');
+
+      // SVG Fixture Components
+      const beamUp = document.getElementById('shade-beam-up');
+      const beamDown = document.getElementById('shade-beam-down');
+      const shadeSurface = document.getElementById('lamp-shade-surface');
+      const shadeTop = document.getElementById('shade-top-rim');
+      const shadeBottom = document.getElementById('shade-bottom-rim');
+      const lampBase = document.getElementById('lamp-base-body');
+      const lampCollar = document.getElementById('lamp-neck-collar');
+      const directionalShadow = document.getElementById('lamp-directional-shadow');
+      const tableTop = document.getElementById('table-top-surface');
+      const tableEdge = document.getElementById('table-edge');
+      const tableApron = document.getElementById('table-apron');
+
+      // Footnote Telemetry
+      const indicator = document.getElementById('scene-state-indicator');
+      const stateText = document.getElementById('scene-state-text');
+
+      if (state) {
+        // --- TURNED ON (Warm 2400K architectural wash) ---
+        if (wallCast) wallCast.style.opacity = '1';
+        if (ceilingCast) ceilingCast.style.opacity = '0.55';
+        if (tableCast) tableCast.style.opacity = '0.9';
+        if (ambientCast) ambientCast.style.opacity = '1';
+
+        if (beamUp) beamUp.style.opacity = '0.45';
+        if (beamDown) beamDown.style.opacity = '0.6';
+        if (shadeSurface) {
+          shadeSurface.setAttribute('fill', 'url(#shadeWarmOn)');
+          shadeSurface.style.filter = 'drop-shadow(0 0 16px rgba(255, 205, 134, 0.75))';
+        }
+        if (shadeTop) shadeTop.setAttribute('fill', '#FFE2B8');
+        if (shadeBottom) shadeBottom.setAttribute('fill', '#FFD194');
+        if (lampBase) lampBase.setAttribute('fill', 'url(#travertineBaseOn)');
+        if (lampCollar) lampCollar.setAttribute('fill', '#D4AF37');
+        if (directionalShadow) directionalShadow.style.opacity = '0.32';
+        if (tableTop) tableTop.setAttribute('fill', 'url(#tableTopOn)');
+        if (tableEdge) tableEdge.setAttribute('fill', '#DBC3A5');
+        if (tableApron) tableApron.setAttribute('fill', 'url(#tableApronOn)');
+
+        if (indicator) {
+          indicator.className = 'w-1.5 h-1.5 rounded-full bg-electric-blue animate-pulse';
+        }
+        if (stateText) {
+          stateText.textContent = 'Active · 2400K Filament Radiance';
+          stateText.className = 'font-mono text-[11px] uppercase tracking-wider text-deep-slate font-semibold';
+        }
+      } else {
+        // --- TURNED OFF (Tranquil cool architectural concrete) ---
+        if (wallCast) wallCast.style.opacity = '0';
+        if (ceilingCast) ceilingCast.style.opacity = '0';
+        if (tableCast) tableCast.style.opacity = '0';
+        if (ambientCast) ambientCast.style.opacity = '0';
+
+        if (beamUp) beamUp.style.opacity = '0';
+        if (beamDown) beamDown.style.opacity = '0';
+        if (shadeSurface) {
+          shadeSurface.setAttribute('fill', 'url(#shadeNaturalOff)');
+          shadeSurface.style.filter = 'none';
+        }
+        if (shadeTop) shadeTop.setAttribute('fill', '#D3D9D5');
+        if (shadeBottom) shadeBottom.setAttribute('fill', '#C8CFCB');
+        if (lampBase) lampBase.setAttribute('fill', 'url(#travertineBaseOff)');
+        if (lampCollar) lampCollar.setAttribute('fill', '#9C8B6E');
+        if (directionalShadow) directionalShadow.style.opacity = '0';
+        if (tableTop) tableTop.setAttribute('fill', 'url(#tableTopOff)');
+        if (tableEdge) tableEdge.setAttribute('fill', '#CCD2CE');
+        if (tableApron) tableApron.setAttribute('fill', 'url(#tableApronOff)');
+
+        if (indicator) {
+          indicator.className = 'w-1.5 h-1.5 rounded-full bg-cool-stone';
+        }
+        if (stateText) {
+          stateText.textContent = 'Standby · Natural Daylight';
+          stateText.className = 'font-mono text-[11px] uppercase tracking-wider text-deep-slate font-medium';
+        }
+      }
+    }
+
+    // Set up tactile drag & click handler on cord
+    const cordRoot = document.getElementById('tactile-cord-root');
+
+    function onPointerDown(e) {
+      isDraggingCord = true;
+      startPointerY = e.clientY || (e.touches && e.touches[0].clientY) || 0;
+      currentPullDistance = 0;
+      if (cordRoot) {
+        cordRoot.setPointerCapture?.(e.pointerId);
+      }
+    }
+
+    function onPointerMove(e) {
+      if (!isDraggingCord) return;
+      const clientY = e.clientY || (e.touches && e.touches[0].clientY) || 0;
+      const deltaY = clientY - startPointerY;
+
+      // Only pull downward with dampening tension
+      if (deltaY > 0) {
+        currentPullDistance = Math.min(MAX_PULL, deltaY * 0.85);
+        updateCordVisuals(currentPullDistance, false);
+      }
+    }
+
+    function onPointerUp(e) {
+      if (!isDraggingCord) return;
+      isDraggingCord = false;
+
+      // If dragged past activation threshold or simply clicked with minimal delta
+      if (currentPullDistance >= ACTIVATION_THRESHOLD || currentPullDistance < 4) {
+        setArchitecturalIllumination(!isLampLit);
+      }
+
+      // Spring back smoothly
+      updateCordVisuals(0, true);
+      currentPullDistance = 0;
+    }
+
+    if (cordRoot) {
+      cordRoot.addEventListener('pointerdown', onPointerDown);
+      window.addEventListener('pointermove', onPointerMove);
+      window.addEventListener('pointerup', onPointerUp);
+      window.addEventListener('pointercancel', onPointerUp);
+    }
+
+    // Filter Buttons in Collections
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterButtons = document.querySelectorAll('.collection-filter-btn');
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterButtons.forEach(b => {
+            b.className = 'collection-filter-btn px-4 py-1.5 font-mono text-[11px] uppercase tracking-wider text-blue-gray hover:text-deep-slate transition-colors';
+          });
+          btn.className = 'collection-filter-btn px-4 py-1.5 font-mono text-[11px] uppercase tracking-wider bg-deep-slate text-porcelain font-semibold';
         });
-        btn.className = 'collection-filter-btn px-5 py-2 font-label-ui text-label-ui uppercase tracking-wider bg-primary-container text-on-primary-container font-medium';
       });
     });
-  });
-</script></main><footer class="w-full bg-surface-container-lowest mt-space-xl"><div class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl"><div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop mb-space-xl"><div class="lg:col-span-6 flex flex-col justify-between pr-0 lg:pr-space-lg"><div><div class="flex items-center gap-space-sm mb-space-md"><img alt="ON OFF Lighting Co Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WnV9OIxttpgmNXWIwQAgmrB_5BKl4vrlehDBGwsDqjY45oD9HTxrXUUAIKZRPn_N6WsRzjoXF5ohbiE-1cO-YXfqYR4-4mWM2zCNce-va_FzKDM9fadkjDV4o62Lr9NuTT7JqobtnIIh2MfcJQsuwnMTUx02-TrlJZQTwi_IcdDKAEwD2K6PXxYLvftxeVFkcZxzTTkYsYJgy7PdfZOXs4LMZ6dAC2tLLr21Yh5ip37X_0jga-gChAhCk"/><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase">ON OFF Lighting Co.</span></div><p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg mb-space-md">Curated European architectural illumination and bespoke luminaire engineering tailored for high-end spatial aesthetics and elite residences.</p></div><div class="mt-space-md"><span class="font-caption-specs text-caption-specs uppercase tracking-widest text-primary block mb-space-xs">Monograph &amp; Archival Release</span><p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">Receive our private lighting catalog &amp; architectural monographs.</p><form class="flex items-center max-w-md"><input class="flex-1 bg-transparent py-2.5 px-0 text-body-sm font-body-sm text-on-surface placeholder:text-outline focus:outline-none" placeholder="ARCHITECTURAL PRACTICE / EMAIL" type="email"/><button class="font-label-ui text-label-ui uppercase tracking-widest px-5 py-2.5 bg-primary-container text-on-primary-container hover:bg-filament-glow hover:text-on-primary-fixed transition-colors shrink-0" type="submit">Request</button></form></div></div><div class="lg:col-span-6 grid grid-cols-2 sm:grid-cols-3 gap-gutter mt-space-lg lg:mt-0"><div><span class="font-label-eyebrow text-label-eyebrow text-primary uppercase block mb-space-md">Showroom</span><ul class="space-y-space-sm"><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="our-showroom" href="#">Bhatar Pavilion</a></li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="visit-us" href="#">Private Appointments</a></li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="our-showroom" href="#">Material Archive</a></li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="visit-us" href="#">Experience Center</a></li></ul></div><div><span class="font-label-eyebrow text-label-eyebrow text-primary uppercase block mb-space-md">Categories</span><ul class="space-y-space-sm"><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="collections" href="#">Linear Architectural</a></li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="collections" href="#">Dark-Light Downlights</a></li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="collections" href="#">Sculptural Pendants</a></li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="shop-by-room" href="#">Acoustic Luminaires</a></li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"><a data-path="shop-by-room" href="#">Outdoor &amp; Facade</a></li></ul></div><div><span class="font-label-eyebrow text-label-eyebrow text-primary uppercase block mb-space-md">Location</span><address class="not-italic font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-sm">J/3, Udhana-Magdalla Rd,<br/>G.P. Society, Bhatar,<br/>Athwa, Surat 395007,<br/>Gujarat, India</address><div class="flex flex-col gap-1 mt-space-sm"><span class="font-caption-specs text-caption-specs uppercase tracking-wider text-primary">Patron Desk</span><span class="font-body-sm text-body-sm text-on-surface">+91 (0261) 829-4100</span></div></div></div></div><div class="pt-space-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md"><div class="flex flex-wrap items-center gap-space-md"><span class="font-caption-specs text-caption-specs uppercase tracking-widest text-outline">© 2025 ON OFF LIGHTING CO. ARCHITECTURAL LUXURY.</span><a class="font-caption-specs text-caption-specs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="font-caption-specs text-caption-specs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" data-path="terms-of-service" href="#">Terms of Service</a><a class="font-caption-specs text-caption-specs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" data-path="spec-library" href="#">DALI-2 Specs</a></div><div class="flex items-center gap-space-md"><span class="font-caption-specs text-caption-specs uppercase tracking-widest text-outline">Surat · Milan · Copenhagen</span></div></div></div></footer></body></html>
+  </script>
+</body></html>
